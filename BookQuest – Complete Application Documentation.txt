@@ -1,0 +1,401 @@
+﻿BookQuest – Complete Application Documentation
+________________
+
+
+1. Overview
+Name: BookQuest
+Description: A web and mobile app that lets users play solo D&D-style adventure books interactively, with automated rules, rolls, and branching narratives.
+Purpose: To make solo TTRPG books as easy and immersive to play as a video game, without manual bookkeeping.
+Platform Goals:
+* Accessible via web browser and mobile devices (iOS and Android)
+* Modular architecture for future expansion (multiplayer, new systems)
+* Developer-friendly stack optimized for use with AI-enhanced environments like Cursor IDE
+
+________________
+
+
+2. MVP Scope
+The Minimum Viable Product (MVP) will focus on delivering a core solo adventure book experience with the following features:
+
+* User Authentication:
+  - Basic email/password login
+  - Protected routes
+
+* Book Library:
+  - Single adventure book (Citadel of Raven)
+  - Book preview with title, description, and cover image
+
+* Character Selection:
+  - Four pre-generated characters
+  - Each character has name, class, and basic stats
+  - Character selection screen before starting adventure
+
+* Adventure Reader:
+  - Story text display
+  - Character stats sidebar
+  - Choice presentation
+  - Dice roll integration
+  - Progress tracking
+  - Story parser for markdown files
+
+* End Game:
+  - Completion screen
+  - Options to restart or return to book list
+
+* Data Management:
+  - User accounts
+  - Pre-generated characters
+  - Story progress tracking
+  - Save/load functionality
+
+Future features (post-MVP):
+* Additional books
+* Character creation
+* Book store
+* Combat interface
+* Achievements & rewards
+* Admin panel
+* Export system
+
+________________
+
+
+3. Target Audience / Users
+Player: Reads and plays adventure books through the interactive interface.
+Admin: Uploads and manages books and users through the admin dashboard.
+Author (optional): Submits original books/stories to the bookstore for approval and publication.
+________________
+
+
+4. Features
+   * User Authentication: Email/password registration and login, with optional Google/Facebook login.
+
+   * Book Library: Filterable library of owned adventure books with previews, genres, and difficulty levels.
+
+   * Book Store: Filterable library of adventure books available for purchase, with previews, genres, difficulty levels, and purchase options.
+
+   * Character Creator: Name, class, background, species, stats (customizable or preset), inventory, avatar image.
+
+   * Adventure Reader: Entry-by-entry progression with embedded images, dynamic choices, and automatic updates to the character state.
+
+   * Dice Roller: Integrated roller for d20 and other dice types; supports skills, saves, and combat checks. Rolls logged to session history.
+
+   * Choice Branching: Smart rendering of choices depending on character stats, previous entries, or inventory.
+
+   * Combat Interface: Optional grid/tile system with initiative and HP tracking, movement, and attack options. The enemies' actions and movement are controlled by the player.
+
+   * Save System: Auto-save at each entry and combat action/movement; one save per book (you can't play many runs of the same book simultaneously); cloud sync support.
+
+   * Progress Tracker: Logs decisions, paths taken, entry history, character status.
+
+   * Achievements & Rewards: Unlockable badges and story outcomes.
+
+   * Admin Panel: CRUD tools for books, characters, users, reports, and logs.
+
+   * Export System: PDF export of character journal or full story path taken.
+
+________________
+
+
+5. User Stories
+      * As a player, I want to create and customize a character, or choose from previously created ones, before starting a story.
+
+      * As a player, I want to make story choices that branch the narrative.
+
+      * As a player, I want to see results from dice rolls and understand how success or failure affects my journey.
+
+      * As a player, I want to replay the same story with different characters or choices.
+
+      * As an admin, I want to upload and format stories using an AI-assisted visual editor where I can upload the story text and come up with a book available in the bookstore.
+
+      * As an author, I want to submit stories for approval with metadata and cover images.
+
+________________
+
+
+6. Wireframes
+         * Homepage: Search bar, login/logout, featured books, filters
+
+         * Bookstore: Scrollable list with search bar, filters, thumbnails, price, and tags
+
+         * Reader View: Text panel, background art, character sheet sidebar, dynamic buttons
+
+         * Character Sheet: Tabs for stats, skills, features, gear, effects, journal
+
+         * Combat View: Zoomable grid-based screen (in case the book provides it), toolbar for actions, info panel
+
+         * Admin Panel: Book manager (upload, delete, validate), user dashboard, log viewer
+
+________________
+
+
+7. System Architecture
+            * Frontend:
+
+               * Next.js (React-based SSR framework)
+
+               * Tailwind CSS for styling
+
+               * Vercel for hosting and CI/CD
+
+            * Rules Engine:
+               * Adapter Pattern implementation for TTRPG rule systems
+               * Core interfaces for:
+                  * Character creation and progression
+                  * Combat resolution
+                  * Skill checks and saving throws
+                  * Inventory and equipment management
+               * Initial implementation for D&D 5e
+               * Designed for future expansion to:
+                  * Pathfinder
+                  * Daggerheart
+                  * Cosmere
+                  * Drawsteel
+                  * Other TTRPG systems
+
+            * Backend (MVP):
+
+               * Supabase (PostgreSQL, Auth, and Storage)
+
+               * Optional Serverless Functions for advanced logic
+
+                  * Backend (Extension):
+
+                     * Node.js + Express microservices (for advanced rulesets, combat engine, AI book tooling)
+
+                     * Hosted on Render or Railway
+
+                        * Authentication:
+
+                           * Firebase Auth (email/password, Google/Facebook OAuth)
+
+                              * Database:
+
+                                 * Supabase PostgreSQL (with optional migration to Planetscale or custom-managed DB in future)
+
+                                    * Storage:
+
+                                       * Supabase Buckets or Firebase Storage for media and book assets
+
+                                          * Payments:
+
+                                             * Stripe for checkout, subscriptions, and in-app purchases
+
+                                                * Monitoring & Logging:
+
+                                                   * Sentry for error tracking
+
+                                                   * LogRocket or PostHog for session insights
+
+                                                      * Dev Environment:
+
+                                                         * Optimized for Cursor IDE with AI-assisted code generation, context-aware navigation, and refactoring
+
+________________
+
+
+8. API Documentation (Extended)
+POST /api/auth/register
+ Request: { email: string, password: string } Response: 201 Created | 400 Bad Request
+GET /api/books
+ Query Params: ?filter=genre,difficulty&limit=10 Response: [ { id, title, description, tags, price, previewUrl } ]
+GET /api/entries/****:code
+ Response: { code, text, nextSteps[], rollCheck?, imageUrl }
+POST /api/character
+ Request: { name, stats, inventory } Response: 200 OK | 400 Bad Request
+POST /api/roll
+ Request: { type: "skill" | "save", stat: "Dexterity", bonus: number } Response: { result: number, success: boolean }
+POST /api/story/save
+ Request: { characterId, bookId, entryCode } Response: 204 No Content
+________________
+
+
+9. Data Models (loose notions, open to severe changes)
+User:
+{
+  "id": "uuid",
+  "email": "user@example.com",
+  "roles": ["player"]
+  ""
+}
+
+
+Character:
+{
+  "id": "uuid",
+  "name": "Garl",
+  "stats": { "str": 10, "dex": 12, "con": 10, "int": 14, "wis": 13, "cha": 8 },
+  "inventory": ["Sword", "Healing Potion"],
+  "currentBookId": "book001",
+  "currentEntryCode": "E001"
+}
+
+
+Entry:
+{
+  "code": "E001",
+  "text": [ "First paragraph...", "Second paragraph…" ],
+  "nextSteps": [
+    { "description": "Take the left path", "code": "E002" },
+    { "description": "Take the right path", "code": "E003" }
+  ],
+  "rollCheck": {
+    "type": "skill",
+    "stat": "Dexterity",
+    "DC": 14
+  },
+  "imageUrl": "https://s3.amazonaws.com/bookquest/e001.jpg"
+}
+
+
+________________
+
+
+10. Error Handling
+                                                                     * 400 Bad Request: Validation or malformed data
+
+                                                                     * 401 Unauthorized: Expired or missing token
+
+                                                                     * 403 Forbidden: User lacks required role
+
+                                                                     * 404 Not Found: Invalid entry code, book ID, or character ID
+
+                                                                     * 500 Internal Server Error: Server issues; logs and alerts triggered
+
+                                                                     * UI Feedback: Toasts, modals, or in-line messages for user visibility
+
+________________
+
+
+11. Deployment Plan
+                                                                        * Frontend:
+
+                                                                           * Hosted on Vercel (Next.js with automatic deployment from GitHub)
+
+                                                                              * Backend (Supabase):
+
+                                                                                 * Managed hosting with DB, Auth, and Storage
+
+                                                                                    * Backend (Optional Microservices):
+
+                                                                                       * Node.js + Express apps deployed via Render/Railway
+
+                                                                                          * CI/CD:
+
+                                                                                             * GitHub Actions for build, test, deploy workflows
+
+                                                                                                * Secrets Management:
+
+                                                                                                   * GitHub Secrets for API keys, Firebase config, Stripe keys
+
+                                                                                                      * Monitoring:
+
+                                                                                                         * Sentry (errors), LogRocket/PostHog (analytics)
+
+________________
+
+
+12. Maintenance & Roadmap
+                                                                                                            * Currently Building:
+
+                                                                                                               * Combat mechanics finalization
+
+                                                                                                               * Voice narration for each entry
+
+                                                                                                                  * Next Phase:
+
+                                                                                                                     * Player-generated content tools
+
+                                                                                                                     * Dynamic lighting/combat animations
+
+                                                                                                                     * Multilingual interface (EN, PT-BR, ES)
+
+                                                                                                                     * Custom Node.js service for advanced logic (combat engine, book parser, etc.)
+
+                                                                                                                        * Maintenance:
+
+                                                                                                                           * Weekly backups, monthly reviews
+
+                                                                                                                           * Feature flag system for staged rollouts
+
+13. MVP Development Guidelines
+   * Core Architecture:
+      * Feature-based folder structure
+      * Clear separation between UI, business logic, and data access
+      * TypeScript for type safety
+      * Basic ESLint configuration
+
+   * Git Workflow:
+      * Feature branch workflow
+      * Basic PR template
+      * Required code review before merge
+
+   * Documentation:
+      * Basic README.md in each major directory
+      * API documentation using OpenAPI/Swagger
+      * Core component documentation
+
+14. MVP Testing Strategy
+   * Essential Tests:
+      * Unit tests for core business logic
+      * Basic API endpoint testing
+      * Critical user flow testing:
+         * Book purchase
+         * Character creation
+         * Basic combat resolution
+         * Save/load functionality
+
+15. MVP Security Measures
+   * Authentication:
+      * JWT with refresh token rotation
+      * Basic rate limiting
+      * Password hashing with bcrypt
+
+   * Data Protection:
+      * Input sanitization
+      * Basic XSS protection
+      * CSRF tokens
+
+16. MVP Monitoring
+   * Essential Monitoring:
+      * Error tracking with Sentry
+      * Basic performance monitoring
+      * Simple logging strategy
+
+17. MVP Deployment
+   * Environments:
+      * Development
+      * Production
+
+   * Deployment Process:
+      * Automated deployments via CI/CD
+      * Basic rollback procedures
+
+18. Future Expansion Considerations
+   * Architecture Decisions:
+      * Rules Engine adapter pattern (as previously documented)
+      * Modular component design
+      * Extensible API structure
+      * Database schema versioning
+
+   * Planned Features:
+      * Additional TTRPG systems support
+      * Enhanced combat mechanics
+      * Multiplayer capabilities
+      * Advanced character customization
+
+   * Technical Debt Management:
+      * Document known limitations
+      * Plan for refactoring opportunities
+      * Track technical debt items
+
+19. MVP Success Metrics
+   * Technical Metrics:
+      * Basic performance metrics
+      * Error rates
+      * Uptime monitoring
+
+   * Business Metrics:
+      * User engagement
+      * Basic conversion tracking
+      * User feedback collection
