@@ -1,9 +1,9 @@
-﻿BookQuest – Complete Application Documentation
+﻿Solo Realms – Complete Application Documentation
 ________________
 
 
 1. Overview
-Name: BookQuest
+Name: Solo Realms
 Description: A web and mobile app that lets users play solo D&D-style adventure books interactively, with automated rules, rolls, and branching narratives.
 Purpose: To make solo TTRPG books as easy and immersive to play as a video game, without manual bookkeeping.
 Platform Goals:
@@ -244,7 +244,7 @@ Entry:
     "stat": "Dexterity",
     "DC": 14
   },
-  "imageUrl": "https://s3.amazonaws.com/bookquest/e001.jpg"
+  "imageUrl": "https://s3.amazonaws.com/SoloRealms/e001.jpg"
 }
 
 
