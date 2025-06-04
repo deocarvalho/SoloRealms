@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">SoloQuest</h1>
+      <h1 className="text-4xl font-bold mb-8">Solo Realms</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="bg-secondary p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold mb-4">The Death Knight's Squire</h2>
