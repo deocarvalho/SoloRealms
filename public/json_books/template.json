@@ -1,0 +1,78 @@
+{
+  "Id": "0",
+  "Title": "Book title",
+  "Authors": [
+    "First author",
+	"Second author"
+  ],
+  "Credits": [
+    "All text by First Author and Second Author",
+    "Art by Artist",
+    "Maps by Map Artist",
+    "Playtested by: Tester One, Tester Two, Tester Three"
+  ],
+  "Adventure": {
+    "StartingPoint": {
+      "Code": "BACKSTORY",
+      "Text": [
+        "First paragraph",
+        "Second paragraph"
+      ],
+      "NextSteps": [
+        {
+          "Description": "Begin adventure",
+          "Code": "Code from the next step 1"
+        }
+      ],
+      "ImageCode": "Code for image 1"
+    },
+    "Entries": [
+      {
+        "Code": "Code from the next step 1",
+        "Text": [
+          "First paragraph",
+          "Second paragraph"
+        ],
+        "NextSteps": [
+          {
+            "Description": "Continue...",
+            "Code": "Code from the next step 2"
+          }
+        ]
+      },
+      {
+        "Code": "Code from the next step 2",
+        "Text": [
+          "First paragraph",
+          "Second paragraph"
+        ],
+        "NextSteps": [
+          {
+            "Description": "Continue...",
+            "Code": "Code from the next step 3"
+          }
+        ],
+        "ImageCode": "Code for image 2"
+      },
+      {
+        "Code": "Code from the next step 3",
+        "Text": [
+          "First paragraph",
+          "Second paragraph",
+          "End of story"
+        ],
+        "NextSteps": []
+      }
+    ]
+  },
+  "Images": [
+    {
+      "Code": "Code for image 1",
+      "Image": "Base64 Image string from the next step 1"
+    },
+    {
+      "Code": "Code for image 2",
+      "Image": "Base64 Image string from the next step 2"
+    }
+  ]
+}

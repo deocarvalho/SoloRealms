@@ -5,7 +5,7 @@ import { Book } from '@/types/adventure';
 export async function loadAdventureBook(): Promise<Book> {
   try {
     console.log('Attempting to load adventure book...');
-    const response = await fetch('/dark-knights-squire.json');
+    const response = await fetch('json_books/dark-knights-squire.json');
     console.log('Fetch response status:', response.status);
     
     if (!response.ok) {
