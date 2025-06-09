@@ -1,0 +1,67 @@
+{
+  "entries": {
+    "START": {
+      "text": [
+        "Welcome to the template book! This is a sample adventure to demonstrate the new book structure.",
+        "You find yourself at the beginning of an exciting journey. What will you do?"
+      ],
+      "imageId": "cover",
+      "nextSteps": [
+        {
+          "description": "Begin your adventure",
+          "target": "CHAPTER_1"
+        }
+      ]
+    },
+    "CHAPTER_1": {
+      "text": [
+        "You've taken your first step into the adventure!",
+        "The path ahead splits into two directions."
+      ],
+      "imageId": "chapter1",
+      "nextSteps": [
+        {
+          "description": "Take the left path",
+          "target": "LEFT_PATH"
+        },
+        {
+          "description": "Take the right path",
+          "target": "RIGHT_PATH"
+        }
+      ]
+    },
+    "LEFT_PATH": {
+      "text": [
+        "You chose the left path.",
+        "This leads to a peaceful clearing with a small stream."
+      ],
+      "imageId": "left_path",
+      "nextSteps": [
+        {
+          "description": "Continue your journey",
+          "target": "END"
+        }
+      ]
+    },
+    "RIGHT_PATH": {
+      "text": [
+        "You chose the right path.",
+        "This leads to an ancient temple with mysterious carvings."
+      ],
+      "imageId": "right_path",
+      "nextSteps": [
+        {
+          "description": "Continue your journey",
+          "target": "END"
+        }
+      ]
+    },
+    "END": {
+      "text": [
+        "Congratulations! You've completed the template adventure.",
+        "This is just a sample to show how the new book structure works."
+      ],
+      "nextSteps": []
+    }
+  }
+} 

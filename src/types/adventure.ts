@@ -11,10 +11,10 @@ export interface NextStep {
 }
 
 export interface Entry extends BaseEntry {
-  ImageCode?: string;
+  ImageCode?: number;
 }
 
-export interface StartingPoint extends BaseEntry {}
+export interface StartingPoint extends Entry {}
 
 export interface Adventure {
   StartingPoint: StartingPoint;
@@ -22,12 +22,12 @@ export interface Adventure {
 }
 
 export interface Image {
-  Code: string;
+  Code: number;
   Image: string;
 }
 
 export interface Book {
-  Id: string;
+  Id: number;
   Title: string;
   Authors: string[];
   Credits: string[];
@@ -37,7 +37,7 @@ export interface Book {
 
 // New interfaces for better separation of concerns
 export interface AdventureProgress {
-  bookId: string;
+  bookId: number;
   entryCode: string;
 }
 
@@ -48,7 +48,7 @@ export interface AdventureStorage {
 }
 
 export interface AdventureLoader {
-  loadBook(): Promise<Book>;
+  loadBook(bookId: number): Promise<Book>;
   findEntryByCode(book: Book, code: string): Entry | undefined;
   getStartingPoint(book: Book): StartingPoint;
 } 

@@ -71,7 +71,7 @@ export class AdventureService {
     return { book, currentEntry: this.loader.getStartingPoint(book) };
   }
 
-  saveProgress(bookId: string, entryCode: string): void {
+  saveProgress(bookId: number, entryCode: string): void {
     this.storage.saveProgress({ bookId, entryCode });
   }
 

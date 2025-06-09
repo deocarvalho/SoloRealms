@@ -1,0 +1,40 @@
+{
+  "id": 1,
+  "title": "The Death Knight's Squire",
+  "authors": [
+    "Paul Bimler"
+  ],
+  "credits": [
+    "All text by Paul Bimler",
+    "Art by Patrick E. Pullen, Tom Prante, GT Artwork, Blinck, David Revoy, Max Daten, Sinister Order, Matej Cadil, Johan Jaeger",
+    "Maps by Paul Bimler",
+    "Playtested by: David Bond, Joshua Lambert, Austin Butcher, Adrian Aguirre Riofrio"
+  ],
+  "version": "1.0.0",
+  "publishedAt": "2025-06-06",
+  "status": "published",
+  "coverImage": {
+    "full": {
+      "id": "0",
+      "filename": "0.jpg",
+      "altText": "Cover art for The Death Knight's Squire",
+      "metadata": {
+        "width": 1357,
+        "height": 1920,
+        "format": "jpg",
+        "size": 707542
+      }
+    },
+    "thumb": {
+      "id": "0-thumb",
+      "filename": "0-thumb.jpg",
+      "altText": "Cover art for The Death Knight's Squire",
+      "metadata": {
+        "width": 170,
+        "height": 240,
+        "format": "jpg",
+        "size": 19977
+      }
+    }
+  }
+}

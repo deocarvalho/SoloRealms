@@ -1,0 +1,268 @@
+{
+  "images": {
+    "0": {
+      "id": "0",
+      "filename": "0.jpg",
+      "altText": "Scene illustration for 0",
+      "metadata": {
+        "width": 140,
+        "height": 198,
+        "format": "jpg",
+        "size": 8577
+      }
+    },
+    "1": {
+      "id": "1",
+      "filename": "1.jpg",
+      "altText": "Scene illustration for 1",
+      "metadata": {
+        "width": 350,
+        "height": 136,
+        "format": "jpg",
+        "size": 18156
+      }
+    },
+    "2": {
+      "id": "2",
+      "filename": "2.jpg",
+      "altText": "Scene illustration for 2",
+      "metadata": {
+        "width": 350,
+        "height": 376,
+        "format": "jpg",
+        "size": 28468
+      }
+    },
+    "3": {
+      "id": "3",
+      "filename": "3.jpg",
+      "altText": "Scene illustration for 3",
+      "metadata": {
+        "width": 350,
+        "height": 513,
+        "format": "jpg",
+        "size": 19347
+      }
+    },
+    "4": {
+      "id": "4",
+      "filename": "4.jpg",
+      "altText": "Scene illustration for 4",
+      "metadata": {
+        "width": 350,
+        "height": 513,
+        "format": "jpg",
+        "size": 19347
+      }
+    },
+    "5": {
+      "id": "5",
+      "filename": "5.jpg",
+      "altText": "Scene illustration for 5",
+      "metadata": {
+        "width": 468,
+        "height": 350,
+        "format": "jpg",
+        "size": 64446
+      }
+    },
+    "6": {
+      "id": "6",
+      "filename": "6.jpg",
+      "altText": "Scene illustration for 6",
+      "metadata": {
+        "width": 350,
+        "height": 513,
+        "format": "jpg",
+        "size": 19347
+      }
+    },
+    "7": {
+      "id": "7",
+      "filename": "7.jpg",
+      "altText": "Scene illustration for 7",
+      "metadata": {
+        "width": 466,
+        "height": 350,
+        "format": "jpg",
+        "size": 35847
+      }
+    },
+    "8": {
+      "id": "8",
+      "filename": "8.jpg",
+      "altText": "Scene illustration for 8",
+      "metadata": {
+        "width": 469,
+        "height": 350,
+        "format": "jpg",
+        "size": 36874
+      }
+    },
+    "9": {
+      "id": "9",
+      "filename": "9.jpg",
+      "altText": "Scene illustration for 9",
+      "metadata": {
+        "width": 464,
+        "height": 350,
+        "format": "jpg",
+        "size": 25309
+      }
+    },
+    "10": {
+      "id": "10",
+      "filename": "10.jpg",
+      "altText": "Scene illustration for 10",
+      "metadata": {
+        "width": 466,
+        "height": 350,
+        "format": "jpg",
+        "size": 23975
+      }
+    },
+    "11": {
+      "id": "11",
+      "filename": "11.jpg",
+      "altText": "Scene illustration for 11",
+      "metadata": {
+        "width": 468,
+        "height": 350,
+        "format": "jpg",
+        "size": 23505
+      }
+    },
+    "12": {
+      "id": "12",
+      "filename": "12.jpg",
+      "altText": "Scene illustration for 12",
+      "metadata": {
+        "width": 468,
+        "height": 350,
+        "format": "jpg",
+        "size": 37621
+      }
+    },
+    "13": {
+      "id": "13",
+      "filename": "13.jpg",
+      "altText": "Scene illustration for 13",
+      "metadata": {
+        "width": 465,
+        "height": 350,
+        "format": "jpg",
+        "size": 40246
+      }
+    },
+    "14": {
+      "id": "14",
+      "filename": "14.jpg",
+      "altText": "Scene illustration for 14",
+      "metadata": {
+        "width": 459,
+        "height": 350,
+        "format": "jpg",
+        "size": 36110
+      }
+    },
+    "15": {
+      "id": "15",
+      "filename": "15.jpg",
+      "altText": "Scene illustration for 15",
+      "metadata": {
+        "width": 461,
+        "height": 350,
+        "format": "jpg",
+        "size": 38451
+      }
+    },
+    "16": {
+      "id": "16",
+      "filename": "16.jpg",
+      "altText": "Scene illustration for 16",
+      "metadata": {
+        "width": 471,
+        "height": 350,
+        "format": "jpg",
+        "size": 39657
+      }
+    },
+    "17": {
+      "id": "17",
+      "filename": "17.jpg",
+      "altText": "Scene illustration for 17",
+      "metadata": {
+        "width": 469,
+        "height": 350,
+        "format": "jpg",
+        "size": 40041
+      }
+    },
+    "18": {
+      "id": "18",
+      "filename": "18.jpg",
+      "altText": "Scene illustration for 18",
+      "metadata": {
+        "width": 463,
+        "height": 350,
+        "format": "jpg",
+        "size": 34360
+      }
+    },
+    "19": {
+      "id": "19",
+      "filename": "19.jpg",
+      "altText": "Scene illustration for 19",
+      "metadata": {
+        "width": 472,
+        "height": 350,
+        "format": "jpg",
+        "size": 38682
+      }
+    },
+    "20": {
+      "id": "20",
+      "filename": "20.jpg",
+      "altText": "Scene illustration for 20",
+      "metadata": {
+        "width": 468,
+        "height": 350,
+        "format": "jpg",
+        "size": 38798
+      }
+    },
+    "21": {
+      "id": "21",
+      "filename": "21.jpg",
+      "altText": "Scene illustration for 21",
+      "metadata": {
+        "width": 458,
+        "height": 350,
+        "format": "jpg",
+        "size": 36537
+      }
+    },
+    "22": {
+      "id": "22",
+      "filename": "22.jpg",
+      "altText": "Scene illustration for 22",
+      "metadata": {
+        "width": 467,
+        "height": 350,
+        "format": "jpg",
+        "size": 36276
+      }
+    },
+    "23": {
+      "id": "23",
+      "filename": "23.jpg",
+      "altText": "Scene illustration for 23",
+      "metadata": {
+        "width": 475,
+        "height": 350,
+        "format": "jpg",
+        "size": 37849
+      }
+    }
+  }
+}

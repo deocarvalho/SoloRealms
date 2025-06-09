@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Cinzel_Decorative } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const cinzelDecorative = Cinzel_Decorative({ 
+  weight: '700',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: 'Solo Realms',

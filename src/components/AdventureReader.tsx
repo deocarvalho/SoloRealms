@@ -1,33 +1,47 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Book, Entry, NextStep } from '@/types/adventure';
-import { AdventureService, JsonAdventureLoader, LocalStorageAdventureStorage } from '@/services/AdventureService';
+import { BookContent, BookEntry } from '@/types/book';
+import { ProgressTracker } from '@/services/ProgressTracker';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Modal from '@/components/Modal';
 
 interface AdventureReaderProps {
-  bookId: string;  // This is actually the full filename
+  bookId: number;
+  userId: string;
 }
 
-export default function AdventureReader({ bookId }: AdventureReaderProps) {
-  const [book, setBook] = useState<Book | null>(null);
-  const [currentEntry, setCurrentEntry] = useState<Entry | null>(null);
+export default function AdventureReader({ bookId, userId }: AdventureReaderProps) {
+  const [book, setBook] = useState<BookContent | null>(null);
+  const [currentEntry, setCurrentEntry] = useState<BookEntry | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
   
-  const adventureService = new AdventureService(
-    new JsonAdventureLoader(`/json_books/${bookId}`),  // Use the full filename directly
-    new LocalStorageAdventureStorage()
-  );
+  const progressTracker = new ProgressTracker(userId);
 
   useEffect(() => {
     async function initializeAdventure() {
       try {
-        const { book: loadedBook, currentEntry: initialEntry } = await adventureService.initializeAdventure();
+        const res = await fetch(`/api/books/${bookId}/content`);
+        if (!res.ok) throw new Error('Failed to load book content');
+        const loadedBook = await res.json();
         setBook(loadedBook);
-        setCurrentEntry(initialEntry);
+
+        // Load progress
+        const progress = await progressTracker.getProgress(bookId);
+
+        // Set initial entry
+        const entryId = progress?.currentEntryId || 'START';
+        const entry = loadedBook.entries.entries[entryId];
+
+        if (!entry) {
+          throw new Error(`Entry ${entryId} not found`);
+        }
+
+        setCurrentEntry(entry);
       } catch (err) {
         console.error('Error initializing adventure:', err);
         setError('Failed to load the adventure book');
@@ -37,159 +51,146 @@ export default function AdventureReader({ bookId }: AdventureReaderProps) {
     }
 
     initializeAdventure();
-  }, [bookId]);
+  }, [bookId, userId]);
 
-  useEffect(() => {
-    if (book && currentEntry) {
-      adventureService.saveProgress(book.Id, currentEntry.Code);
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
-  }, [book, currentEntry]);
-
-  const handleChoice = (code: string) => {
+  const handleChoice = async (target: string, description: string) => {
     if (!book) return;
     
-    const nextEntry = adventureService.getNextEntry(book, code);
+    const nextEntry = book.entries.entries[target];
     if (nextEntry) {
       setCurrentEntry(nextEntry);
+      // Check if this is the end of the book (no more next steps)
+      const isEnd = nextEntry.nextSteps.length === 0;
+      await progressTracker.updateProgress(bookId, target, description, isEnd);
     }
   };
 
-  const handleRestart = () => {
-    if (book) {
-      setCurrentEntry(book.Adventure.StartingPoint);
-      adventureService.clearProgress();
+  const handleRestart = async () => {
+    if (!book) return;
+    
+    const startEntry = book.entries.entries['START'];
+    if (startEntry) {
+      // First clear the progress
+      await progressTracker.clearProgress(bookId);
+      
+      // Then set the current entry
+      setCurrentEntry(startEntry);
+      
+      // Finally create new progress
+      await progressTracker.updateProgress(bookId, 'START', 'Restarted adventure');
     }
   };
 
-  const handleCloseBook = () => {
+  const handleCloseBook = async () => {
+    // If we're at an endpoint (no next steps), clear the progress
+    if (currentEntry && currentEntry.nextSteps.length === 0) {
+      await progressTracker.clearProgress(bookId);
+    }
+    // Navigate back to the book list
     window.location.href = '/';
-    adventureService.clearProgress();
   };
 
-  const handleImageError = (imageCode: string) => {
-    setFailedImages(prev => new Set(Array.from(prev).concat(imageCode)));
+  const handleImageError = (imageId: string) => {
+    setFailedImages(prev => new Set(Array.from(prev).concat(imageId)));
   };
 
-  const getImageByCode = (code: string | undefined): string | undefined => {
-    if (!book || !code || failedImages.has(code)) return undefined;
-    return book.Images?.find(img => img.Code === code)?.Image;
+  const getImageUrl = (imageId: string | undefined): string | undefined => {
+    if (!book || !imageId || failedImages.has(imageId)) return undefined;
+    const image = book.images.images[imageId];
+    if (!image) return undefined;
+    
+    return `/books/book-${bookId.toString().padStart(8, '0')}/images/${image.filename}`;
   };
 
   if (loading) {
-    return <LoadingState />;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-xl">Loading adventure...</div>
+      </div>
+    );
   }
 
   if (error) {
-    return <ErrorState error={error} />;
-  }
-
-  if (!currentEntry) {
-    return <NoEntryState />;
-  }
-
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-3xl mx-auto expand-content">
-        <AdventureContent 
-          entry={currentEntry}
-          book={book}
-          getImageByCode={getImageByCode}
-          onChoice={handleChoice}
-          onRestart={handleRestart}
-          onClose={handleCloseBook}
-          onImageError={handleImageError}
-        />
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-xl text-red-600">{error}</div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
-// Extracted components for better separation of concerns
-function LoadingState() {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="text-xl">Loading adventure...</div>
-    </div>
-  );
-}
+  if (!currentEntry || !book) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-xl">No entry found</div>
+      </div>
+    );
+  }
 
-function ErrorState({ error }: { error: string }) {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="text-xl text-red-500">{error}</div>
-    </div>
-  );
-}
-
-function NoEntryState() {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="text-xl">No entry found</div>
-    </div>
-  );
-}
-
-interface AdventureContentProps {
-  entry: Entry;
-  book: Book | null;
-  getImageByCode: (code: string | undefined) => string | undefined;
-  onChoice: (code: string) => void;
-  onRestart: () => void;
-  onClose: () => void;
-  onImageError: (code: string) => void;
-}
-
-function AdventureContent({ entry, book, getImageByCode, onChoice, onRestart, onClose, onImageError }: AdventureContentProps) {
   return (
     <>
-      <div className="bg-secondary p-6 rounded-lg shadow-lg mb-6">
-        {entry.ImageCode && getImageByCode(entry.ImageCode) && (
-          <div className="my-6">
-            <img 
-              src={getImageByCode(entry.ImageCode)} 
-              alt="Scene illustration" 
-              className="max-w-full h-auto rounded-lg shadow-lg"
-              onError={() => onImageError(entry.ImageCode!)}
-            />
-          </div>
-        )}
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-secondary p-6 rounded-lg shadow-lg mb-6">
+            {currentEntry.imageId && (
+              <div className="flex justify-center items-center my-6">
+                <img 
+                  src={getImageUrl(currentEntry.imageId)} 
+                  alt={book.images.images[currentEntry.imageId]?.altText || 'Scene illustration'} 
+                  className="max-w-full h-auto rounded-lg shadow-lg"
+                  onError={() => handleImageError(currentEntry.imageId!)}
+                  loading="lazy"
+                />
+              </div>
+            )}
 
-        {entry.Text.map((paragraph: string, index: number) => (
-          <div key={index} className="mb-4 text-lg">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{paragraph}</ReactMarkdown>
-          </div>
-        ))}
-      </div>
+            {currentEntry.text.map((paragraph: string, index: number) => (
+              <div key={index} className="mb-4 text-lg">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{paragraph}</ReactMarkdown>
+              </div>
+            ))}
 
-      <div className="space-y-4">
-        {entry.NextSteps.length > 0 ? (
-          entry.NextSteps.map((step: NextStep, index: number) => (
+            <div className="mt-8 space-y-4">
+              {currentEntry.nextSteps.map((step, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleChoice(step.target, step.description)}
+                  className="w-full bg-accent text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-left"
+                >
+                  {step.description}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex justify-between">
             <button
-              key={index}
-              onClick={() => onChoice(step.Code)}
-              className="w-full bg-accent text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-left"
+              onClick={() => setShowConfirmModal(true)}
+              className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
             >
-              {step.Description}
-            </button>
-          ))
-        ) : (
-          <>
-            <button
-              onClick={onRestart}
-              className="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors text-left"
-            >
-              Restart Adventure
+              Restart
             </button>
             <button
-              onClick={onClose}
-              className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors text-left"
+              onClick={handleCloseBook}
+              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
             >
               Close Book
             </button>
-          </>
-        )}
+          </div>
+        </div>
       </div>
+
+      <Modal
+        isOpen={showConfirmModal}
+        onClose={() => setShowConfirmModal(false)}
+        onConfirm={() => {
+          handleRestart();
+          setShowConfirmModal(false);
+        }}
+        title="Restart Adventure"
+        message="Are you sure you want to restart? Your current progress will be lost."
+        confirmText="Restart"
+        cancelText="Cancel"
+      />
     </>
   );
 } 

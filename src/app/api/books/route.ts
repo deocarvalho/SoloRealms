@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { BookMetadata } from '@/types/book';
 
 export async function GET() {
   try {
-    const booksDirectory = path.join(process.cwd(), 'public', 'json_books');
+    const booksDirectory = path.join(process.cwd(), 'books');
     console.log('Reading books from directory:', booksDirectory);
     
     if (!fs.existsSync(booksDirectory)) {
@@ -15,16 +16,27 @@ export async function GET() {
       );
     }
 
-    const files = fs.readdirSync(booksDirectory);
-    console.log('Found files:', files);
-    
-    // Filter for JSON files and exclude template.json
-    const bookFiles = files.filter(file => 
-      file.endsWith('.json') //&& file !== 'template.json'
-    );
-    console.log('Filtered book files:', bookFiles);
+    const bookFolders = fs.readdirSync(booksDirectory)
+      .filter(folder => folder.startsWith('book-'))
+      .sort();
 
-    return NextResponse.json({ books: bookFiles });
+    console.log('Found book folders:', bookFolders);
+    
+    const books: BookMetadata[] = [];
+    
+    for (const folder of bookFolders) {
+      try {
+        const metadataPath = path.join(booksDirectory, folder, 'metadata.json');
+        if (fs.existsSync(metadataPath)) {
+          const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf-8')) as BookMetadata;
+          books.push(metadata);
+        }
+      } catch (error) {
+        console.error(`Error reading metadata for ${folder}:`, error);
+      }
+    }
+
+    return NextResponse.json({ books });
   } catch (error) {
     console.error('Error reading books directory:', error);
     return NextResponse.json(

@@ -1,0 +1,48 @@
+{
+  "images": {
+    "cover": {
+      "id": "cover",
+      "filename": "cover.jpg",
+      "altText": "Book cover illustration showing an adventurer at a crossroads",
+      "metadata": {
+        "width": 800,
+        "height": 600,
+        "format": "jpg",
+        "size": 150000
+      }
+    },
+    "chapter1": {
+      "id": "chapter1",
+      "filename": "chapter1.jpg",
+      "altText": "A fork in the road with two distinct paths",
+      "metadata": {
+        "width": 800,
+        "height": 600,
+        "format": "jpg",
+        "size": 120000
+      }
+    },
+    "left_path": {
+      "id": "left_path",
+      "filename": "left_path.jpg",
+      "altText": "A peaceful clearing with a small stream",
+      "metadata": {
+        "width": 800,
+        "height": 600,
+        "format": "jpg",
+        "size": 130000
+      }
+    },
+    "right_path": {
+      "id": "right_path",
+      "filename": "right_path.jpg",
+      "altText": "An ancient temple with mysterious carvings",
+      "metadata": {
+        "width": 800,
+        "height": 600,
+        "format": "jpg",
+        "size": 140000
+      }
+    }
+  }
+} 
