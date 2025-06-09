@@ -139,7 +139,7 @@ export default function BookListClient({ books }: BookListClientProps) {
               <div className="p-6 flex flex-col flex-grow">
                 <h2 className="text-2xl font-bold mb-2 text-white drop-shadow">{book.title}</h2>
                 <p className="text-gray-300 mb-4">By {book.authors?.join(', ')}</p>
-                <div className="mt-auto">
+                <div className="mt-auto flex space-x-4">
                   {hasOngoingSession ? (
                     <div className="flex space-x-4">
                       <button

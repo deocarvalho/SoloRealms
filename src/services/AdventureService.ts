@@ -57,8 +57,8 @@ export class AdventureService {
     private readonly storage: AdventureStorage
   ) {}
 
-  async initializeAdventure(): Promise<{ book: Book; currentEntry: Entry | StartingPoint }> {
-    const book = await this.loader.loadBook();
+  async initializeAdventure(bookId: number): Promise<{ book: Book; currentEntry: Entry | StartingPoint }> {
+    const book = await this.loader.loadBook(bookId);
     const savedProgress = this.storage.loadProgress();
     
     if (savedProgress?.bookId === book.Id) {
