@@ -66,7 +66,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to the first entry, ADVENTUREBEGINS",
+          "description": "Begin your adventure.",
           "target": "ADVENTUREBEGINS"
         }
       ]
@@ -84,26 +84,26 @@
       "imageId": 1,
       "nextSteps": [
         {
-          "description": "Do you accept the old man’s invitation? If so, go to entry BREWSKI",
+          "description": "Accept the old man's invitation.",
           "target": "BREWSKI"
         },
         {
-          "description": "If you are mindful of the time and choose to ride on, go to entry KEEPGOING",
+          "description": "You are mindful of the time and choose to ride on.",
           "target": "KEEPGOING"
         }
       ]
     },
     "ALLCLEAR": {
       "text": [
-        "You search around the door but find nothing trap-like. (continue across…)"
+        "You search around the door but find nothing trap-like."
       ],
       "nextSteps": [
         {
-          "description": "To try and open the door, go to entry OPENSTONEDOOR",
+          "description": "Try to open the door.",
           "target": "OPENSTONEDOOR"
         },
         {
-          "description": "To leave and continue north, go back to Tilepage 3 and continue from the last line you read.",
+          "description": "Leave and continue north.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -116,19 +116,19 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you have rope? If so, go to entry ROPEESCAPE",
+          "description": "Use a rope to escape.",
           "target": "ROPEESCAPE"
         },
         {
-          "description": "Do you know the spell Jump? If so, go to JUMPESCAPE",
+          "description": "Use the spell Jump.",
           "target": "JUMPESCAPE"
         },
         {
-          "description": "Are you a variant tiefling (Sword Coast Adventurer’s Guide) or do you have some other way of flying? Go to entry FLYESCAPE",
+          "description": "Use some form of flying.",
           "target": "FLYESCAPE"
         },
         {
-          "description": "Otherwise you could try carving steps into the dirt walls with your weapon. Go to entry DIGESCAPE",
+          "description": "Carve steps into the dirt walls with your weapon.",
           "target": "DIGESCAPE"
         }
       ]
@@ -141,11 +141,11 @@
       ],
       "nextSteps": [
         {
-          "description": "“You are very rude, my friend. No wonder you’re out here all alone talking to fairies.” Go to CHASTISE",
+          "description": "“You are very rude, my friend. No wonder you’re out here all alone talking to fairies.”",
           "target": "CHASTISE"
         },
         {
-          "description": "Shaking your head confusedly, you turn and depart, leaving this demented soul to his own devices. Return to tilepage 9 and continue from the last direction you read",
+          "description": "Confusedly turn and depart, leaving this demented soul to his own devices.",
           "target": "TILEPAGE_9"
         }
       ]
@@ -157,7 +157,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -168,7 +168,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry INDUCTED",
+          "description": "Continue...",
           "target": "INDUCTED"
         }
       ]
@@ -179,11 +179,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To ignore your instincts and head south anyway, go to IGNOREINSTINCTS",
+          "description": "Ignore your instincts and head south anyway.",
           "target": "IGNOREINSTINCTS"
         },
         {
-          "description": "To return to the cemetery, go to tilepage 10 and follow the directions there (ignoring anything you have already encountered or investigated)",
+          "description": "Return to the cemetery, ignoring anything already encountered or investigated.",
           "target": "TILEPAGE_10"
         }
       ]
@@ -200,7 +200,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -213,11 +213,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you bow to the Blood Knight’s will? If so, go to DARKQUEST",
+          "description": "Bow to the Blood Knight’s will.",
           "target": "DARKQUEST"
         },
         {
-          "description": "If you still resist, go to entry RESIST",
+          "description": "Resist the Blood Knight’s will.",
           "target": "RESIST"
         }
       ]
@@ -229,11 +229,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you know the spell Detect Evil and Good? You can cast this by going to entry DETECTEVIL",
+          "description": "Cast the spell Detect Evil and Good.",
           "target": "DETECTEVIL"
         },
         {
-          "description": "Alternately, you can simply proceed inside. Go to entry CROSSTHRESHOLD",
+          "description": "Proceed inside.",
           "target": "CROSSTHRESHOLD"
         }
       ]
@@ -247,11 +247,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To move through the rows of gravestones towards the crypt, despite your instincts, go to entry SOFTLY",
+          "description": "Move through the rows of gravestones towards the crypt, despite your instincts.",
           "target": "SOFTLY"
         },
         {
-          "description": "To leave this place, go to LEAVECEMETERY",
+          "description": "Leave this place.",
           "target": "LEAVECEMETERY"
         }
       ]
@@ -269,11 +269,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If so, go to entry SNEAKUP",
+          "description": "Yes.",
           "target": "SNEAKUP"
         },
         {
-          "description": "If not, go to entry WELCOME",
+          "description": "No.",
           "target": "WELCOME"
         }
       ]
@@ -285,15 +285,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry PASSAGETRAPS",
+          "description": "Successful.",
           "target": "PASSAGETRAPS"
         },
         {
-          "description": "If you are unsuccessful, go to entry ITLLBEFINE",
+          "description": "Unsuccessful.",
           "target": "ITLLBEFINE"
         },
         {
-          "description": "If you prefer not to try, go to entry DOGLEG",
+          "description": "Prefer not to try.",
           "target": "DOGLEG"
         }
       ]
@@ -304,11 +304,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to WHATTRAPS",
+          "description": "Succeed.",
           "target": "WHATTRAPS"
         },
         {
-          "description": "If you fail, go to TRAPSWHAT",
+          "description": "Fail.",
           "target": "TRAPSWHAT"
         }
       ]
@@ -322,11 +322,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To investigate the image of Amaunator, go to entry INSPECTALTAR",
+          "description": "Investigate the image of Amaunator.",
           "target": "INSPECTALTAR"
         },
         {
-          "description": "If you have already inspected the altar, you become mindful that time is pressing, and you leave this underground chamber. Go to entry LEAVECHAMBER",
+          "description": "Having already inspected the altar, become mindful that time is pressing, and leave this underground chamber.",
           "target": "LEAVECHAMBER"
         }
       ]
@@ -337,7 +337,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -349,7 +349,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry MOVEWITHIN",
+          "description": "Continue...",
           "target": "MOVEWITHIN"
         }
       ]
@@ -360,7 +360,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CENTIBATTLE",
+          "description": "Engage in battle with the centipede.",
           "target": "CENTIBATTLE"
         }
       ]
@@ -378,7 +378,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry YOURATTACK",
+          "description": "Continue...",
           "target": "YOURATTACK"
         }
       ]
@@ -389,7 +389,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CIRCULARROOM",
+          "description": "Continue...",
           "target": "CIRCULARROOM"
         }
       ]
@@ -402,11 +402,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you tell this thief of your quest? Go to DISCLOSURE",
+          "description": "Tell this thief of your quest.",
           "target": "DISCLOSURE"
         },
         {
-          "description": "Or will you make something up? Go to SPINYARN",
+          "description": "Make something up.",
           "target": "SPINYARN"
         }
       ]
@@ -418,11 +418,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you choose expertise, go to EXPERTISE",
+          "description": "Choose expertise.",
           "target": "EXPERTISE"
         },
         {
-          "description": "If you choose endurance, go to ROBUSTNESS",
+          "description": "Choose endurance.",
           "target": "ROBUSTNESS"
         }
       ]
@@ -438,7 +438,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPOILSOFADVENTURE",
+          "description": "Continue...",
           "target": "SPOILSOFADVENTURE"
         }
       ]
@@ -451,11 +451,11 @@
       "imageId": 2,
       "nextSteps": [
         {
-          "description": "Do you tell him of your quest? If so, go to entry QUESTCONVO",
+          "description": "Tell him of your quest.",
           "target": "QUESTCONVO"
         },
         {
-          "description": "If you choose to simply replenish yourself and be on your way, go to entry REPLENISH",
+          "description": "Replenish yourself and be on your way.",
           "target": "REPLENISH"
         }
       ]
@@ -469,11 +469,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you pay the gold? If so, go to entry PAYTOLL",
+          "description": "Pay the gold.",
           "target": "PAYTOLL"
         },
         {
-          "description": "If not, go to entry TOLLBEDAMNED",
+          "description": "Refuse to pay the toll.",
           "target": "TOLLBEDAMNED"
         }
       ]
@@ -484,15 +484,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you roll 0-33 go to entry MIDNIGHTSNACK",
+          "description": "Rolled 0-33.",
           "target": "MIDNIGHTSNACK"
         },
         {
-          "description": "If you roll 34-66 go to entry DISTURBED",
+          "description": "Rolled 34-66.",
           "target": "DISTURBED"
         },
         {
-          "description": "If you roll 67-100 go to entry NIGHTNIGHT",
+          "description": "Rolled 67-100.",
           "target": "NIGHTNIGHT"
         }
       ]
@@ -504,7 +504,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPIDERBATTLE",
+          "description": "Engage in battle with the spiders.",
           "target": "SPIDERBATTLE"
         }
       ]
@@ -517,7 +517,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry INDUCTED",
+          "description": "Continue...",
           "target": "INDUCTED"
         }
       ]
@@ -530,7 +530,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry BUMPINTHENIGHT",
+          "description": "Continue...",
           "target": "BUMPINTHENIGHT"
         }
       ]
@@ -551,7 +551,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry INDUCTED",
+          "description": "Continue...",
           "target": "INDUCTED"
         }
       ]
@@ -564,7 +564,7 @@
       ],
       "nextSteps": [
         {
-          "description": "When you are done here, you may leave this cave. Go to entry LEAVECAVERN",
+          "description": "Leave this cave.",
           "target": "LEAVECAVERN"
         }
       ]
@@ -573,24 +573,24 @@
       "text": [
         "You peer into the black cave entrance that gapes at you from the other side of the river. The area around the entrance is interesting – it appears to be surrounded with discarded pottery and other detritus.",
         "Perhaps there was a settlement here once. Tribal societies once roamed this area freely in prehistory. Now the cave appears abandoned, and its black mouth forbidding.",
-        "The stream appears calm but a glance at its depths tells you it is moving quite swiftly. It might take a bit of effort to cross.",
+        "The stream appears calm but a glance at its depths tells you it is moving quite swiftly. It might take a bit of effort to cross. To attempt to wade across the stream, make an athletics check, DC 12.",
         "*You may take this opportunity to refill your waterskin if need be.*"
       ],
       "nextSteps": [
         {
-          "description": "Are you a paladin? If so, go to entry DEEPCURRENT",
+          "description": "Continue if a paladin.",
           "target": "DEEPCURRENT"
         },
         {
-          "description": "To attempt to wade across the stream, make an athletics check, DC 12. If you succeed go to entry STREAMCROSSED",
+          "description": "Success wading across the stream.",
           "target": "STREAMCROSSED"
         },
         {
-          "description": "If you fail, go to entry SWEPTDOWN",
+          "description": "Failure wading across the stream.",
           "target": "SWEPTDOWN"
         },
         {
-          "description": "If you do not wish to attempt this, Return to tilepage 7 and continue from the last direction you read.",
+          "description": "Do not wish to attempt this.",
           "target": "TILEPAGE_7"
         }
       ]
@@ -606,11 +606,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry TOAST",
+          "description": "Successful.",
           "target": "TOAST"
         },
         {
-          "description": "If you are killed, go to entry OHWELL",
+          "description": "Killed.",
           "target": "OHWELL"
         }
       ]
@@ -630,7 +630,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -641,15 +641,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you score 0-33, go to DRYBONES",
+          "description": "Rolled 0-33.",
           "target": "DRYBONES"
         },
         {
-          "description": "If you score 34-65, go to PHANTASM",
+          "description": "Rolled 34-65.",
           "target": "PHANTASM"
         },
         {
-          "description": "If you score 66-100, go to QUIETPATH",
+          "description": "Rolled 66-100.",
           "target": "QUIETPATH"
         }
       ]
@@ -676,7 +676,7 @@
       "imageId": 3,
       "nextSteps": [
         {
-          "description": "Return to tilepage entry 8 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -689,11 +689,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you fail, go to entry GREYBEAM",
+          "description": "Failed.",
           "target": "GREYBEAM"
         },
         {
-          "description": "If you succeed, go to entry LUCKYDODGE",
+          "description": "Success.",
           "target": "LUCKYDODGE"
         }
       ]
@@ -704,7 +704,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 1 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_1"
         }
       ]
@@ -715,11 +715,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to CRAFTY",
+          "description": "Successful.",
           "target": "CRAFTY"
         },
         {
-          "description": "If you are unsuccessful, go to HMMM",
+          "description": "Unsuccessful.",
           "target": "HMMM"
         }
       ]
@@ -730,11 +730,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To investigate this rubble, go to entry LOOKRUBBLE",
+          "description": "Investigate this rubble.",
           "target": "LOOKRUBBLE"
         },
         {
-          "description": "To continue on towards the exit on the other side of the room, go to entry TUNNELVISION",
+          "description": "Continue on towards the exit on the other side of the room.",
           "target": "TUNNELVISION"
         }
       ]
@@ -746,11 +746,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to DIGGER",
+          "description": "Success.",
           "target": "DIGGER"
         },
         {
-          "description": "If you fail, go to TOOSLOW",
+          "description": "Failure.",
           "target": "TOOSLOW"
         }
       ]
@@ -763,7 +763,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry NORTHPATH",
+          "description": "Continue...",
           "target": "NORTHPATH"
         }
       ]
@@ -774,11 +774,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to TREECLIMB",
+          "description": "Success.",
           "target": "TREECLIMB"
         },
         {
-          "description": "If unsuccessful, go to OHDEAR",
+          "description": "Failure.",
           "target": "OHDEAR"
         }
       ]
@@ -793,7 +793,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -804,7 +804,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -817,11 +817,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you hit, take note of damage and go to CULTISTCOMBAT",
+          "description": "Hit (take note of damage).",
           "target": "CULTISTCOMBAT"
         },
         {
-          "description": "If you miss, go to entry ENRAGED",
+          "description": "Miss.",
           "target": "ENRAGED"
         }
       ]
@@ -835,11 +835,11 @@
       ],
       "nextSteps": [
         {
-          "description": "“A blessing? Why thank you, that sounds wonderful!” Go to entry BLESSING",
+          "description": "“A blessing? Why thank you, that sounds wonderful!”",
           "target": "BLESSING"
         },
         {
-          "description": "“No thank you, I must be on my way.” Go to entry DECLINE",
+          "description": "“No thank you, I must be on my way.”",
           "target": "DECLINE"
         }
       ]
@@ -856,15 +856,15 @@
       ],
       "nextSteps": [
         {
-          "description": "“What is that statue that your rest your feet on, friend?” Go to entry STATUEQUESTION",
+          "description": "“What is that statue that you rest your feet on, friend?”",
           "target": "STATUEQUESTION"
         },
         {
-          "description": "“Do you know anything of the Death Knight?” Go to DKQUESTION",
+          "description": "“Do you know anything of the Death Knight?”",
           "target": "DKQUESTION"
         },
         {
-          "description": "“Who is your little winged friend?” Go to FAIRYQUESTION",
+          "description": "“Who is your little winged friend?”",
           "target": "FAIRYQUESTION"
         }
       ]
@@ -876,11 +876,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If the result is is equal to or higher than your AC, go to SLAMMED",
+          "description": "The result is equal to or higher than your AC.",
           "target": "SLAMMED"
         },
         {
-          "description": "If lower, go to EXTRICATE",
+          "description": "The result is lower than your AC.",
           "target": "EXTRICATE"
         }
       ]
@@ -894,19 +894,19 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to MASTERTHIEF",
+          "description": "Successful.",
           "target": "MASTERTHIEF"
         },
         {
-          "description": "If you are unsuccessful, go to NOOBTHIEF",
+          "description": "Unsuccessful.",
           "target": "NOOBTHIEF"
         },
         {
-          "description": "If you would rather not, you can check the pile of books and scrolls for clues. Go to SEARCHCLUES",
+          "description": "Check the pile of books and scrolls for clues.",
           "target": "SEARCHCLUES"
         },
         {
-          "description": "Or you could leave the cave. Go to entry LEAVECAVE",
+          "description": "Leave the cave.",
           "target": "LEAVECAVE"
         }
       ]
@@ -920,15 +920,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Are you a paladin? If so go to EXUDING",
+          "description": "Continue if a paladin.",
           "target": "EXUDING"
         },
         {
-          "description": "If not, you move forward to investigate the entrance to the crypt. Go to entry ENTRANCETOMB",
+          "description": "Move forward to investigate the entrance to the crypt.",
           "target": "ENTRANCETOMB"
         },
         {
-          "description": "If there is some other action you would like to take, for example to heal, (not rest, that would be foolish here), or leave the cemetery, you may return to tilepage 10 and take this action, moving your token appropriately.",
+          "description": "Take some other action, like heal (not rest, that would be foolish here), or leave the cemetery.",
           "target": "TILEPAGE_10"
         }
       ]
@@ -939,11 +939,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you win the initiative, go to INITWON",
+          "description": "Initiative won.",
           "target": "INITWON"
         },
         {
-          "description": "If you do not, go to KNIGHTATTACK",
+          "description": "Initiative lost.",
           "target": "KNIGHTATTACK"
         }
       ]
@@ -954,7 +954,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Move your token to sub-map 3 (in the tilepage booklet) and follow the directions given",
+          "description": "Continue...",
           "target": "SUBMAP_3"
         }
       ]
@@ -972,19 +972,19 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are victorious, go to EXCULTIST",
+          "description": "Victorious.",
           "target": "EXCULTIST"
         },
         {
-          "description": "If you are victorious, but still within the pit, go to STILLSTUCK",
+          "description": "Victorious, but still within the pit.",
           "target": "STILLSTUCK"
         },
         {
-          "description": "If you run out of ranged attacks, go to SPENT",
+          "description": "Run out of ranged attacks.",
           "target": "SPENT"
         },
         {
-          "description": "If you are defeated, go to OHWELL",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -997,7 +997,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry INDUCTED",
+          "description": "Continue...",
           "target": "INDUCTED"
         }
       ]
@@ -1013,7 +1013,7 @@
       ],
       "nextSteps": [
         {
-          "description": "You are standing on a pathway through Weathercote Wood. Go to tilepage 6 and continue from the last direction you read, or start with the first entry if this is your first time on this tilepage.",
+          "description": "Continue on through Weathercote Wood.",
           "target": "TILEPAGE_6"
         }
       ]
@@ -1026,11 +1026,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you wish to enter, go to ENTERPASSAGE",
+          "description": "Enter the passage.",
           "target": "ENTERPASSAGE"
         },
         {
-          "description": "Or return to tilepage 3 if you want to leave this place and continue north or east.",
+          "description": "Leave this place and continue north or east.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1041,11 +1041,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to ENTERPASSAGE",
+          "description": "Enter the passage.",
           "target": "ENTERPASSAGE"
         },
         {
-          "description": "Or return to tilepage 3 if you want to leave this place and continue north or east.",
+          "description": "Leave this place and continue north or east.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1057,7 +1057,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to ENTRANCETOMB",
+          "description": "Continue...",
           "target": "ENTRANCETOMB"
         }
       ]
@@ -1071,11 +1071,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you know the Identify spell? That would tell you what this trinket is. If you want to cast Identify, go to DETECTRING",
+          "description": "Cast the Identify spell. That would tell what this trinket is.",
           "target": "DETECTRING"
         },
         {
-          "description": "If not, you could try putting it on? Go to entry PUTRINGON",
+          "description": "Try putting it on.",
           "target": "PUTRINGON"
         }
       ]
@@ -1088,7 +1088,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1102,7 +1102,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to tilepage 1 (Maps Booklet) and then click this link to go to the entry.",
+          "description": "Continue...",
           "target": "TILEPAGE_1"
         }
       ]
@@ -1115,11 +1115,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To have a look around, go to entry INVESTIGATESPIDERS.",
+          "description": "Have a look around.",
           "target": "INVESTIGATESPIDERS"
         },
         {
-          "description": "To keep going, go back to Tilepage 2 and continue from the last direction you read.",
+          "description": "Keep going.",
           "target": "TILEPAGE_2"
         }
       ]
@@ -1131,11 +1131,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to JUMPAWAY",
+          "description": "Success.",
           "target": "JUMPAWAY"
         },
         {
-          "description": "If unsuccessful, go to CORPSE",
+          "description": "Failure.",
           "target": "CORPSE"
         }
       ]
@@ -1146,11 +1146,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If so, go to entry BLOODKNIGHTSCURSE",
+          "description": "Yes.",
           "target": "BLOODKNIGHTSCURSE"
         },
         {
-          "description": "If not, go to entry ULTIMATEGLORY",
+          "description": "No.",
           "target": "ULTIMATEGLORY"
         }
       ]
@@ -1164,15 +1164,15 @@
       ],
       "nextSteps": [
         {
-          "description": "*“Sorry, I didn’t mean anything by it. I’m on a quest, that’s all.”* Go to entry APOLOGIZE",
+          "description": "*“Sorry, I didn’t mean anything by it. I’m on a quest, that’s all.”*",
           "target": "APOLOGIZE"
         },
         {
-          "description": "*“Oh ok then, I will take a blessing.”* Go to entry BLESSING",
+          "description": "*“Oh ok then, I will take a blessing.”*",
           "target": "BLESSING"
         },
         {
-          "description": "Turn and depart at a run… this man seems a bit dangerous and unpredictable. Go to entry SCARPER",
+          "description": "Turn and depart at a run… this man seems a bit dangerous and unpredictable.",
           "target": "SCARPER"
         }
       ]
@@ -1185,15 +1185,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to SEARCHCAVE",
+          "description": "Success.",
           "target": "SEARCHCAVE"
         },
         {
-          "description": "If unsuccessful, go to CAVECLUES",
+          "description": "Failure.",
           "target": "CAVECLUES"
         },
         {
-          "description": "If you would rather not, go to entry LEAVECAVERN",
+          "description": "Leave the cavern.",
           "target": "LEAVECAVERN"
         }
       ]
@@ -1206,7 +1206,7 @@
       ],
       "nextSteps": [
         {
-          "description": "When you are ready, you may return to the previous entry, CAVESTREAM, and continue from there.",
+          "description": "Continue...",
           "target": "CAVESTREAM"
         }
       ]
@@ -1218,11 +1218,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you fail, go to entry AMBUSH",
+          "description": "Failure.",
           "target": "AMBUSH"
         },
         {
-          "description": "If you succeed, go to FREEPASS",
+          "description": "Success.",
           "target": "FREEPASS"
         }
       ]
@@ -1236,11 +1236,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry SILVERTONGUE",
+          "description": "Successful.",
           "target": "SILVERTONGUE"
         },
         {
-          "description": "If you fail, go to UNCONVINCING",
+          "description": "Failure.",
           "target": "UNCONVINCING"
         }
       ]
@@ -1254,7 +1254,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -1262,15 +1262,15 @@
     "DETECTEVIL": {
       "text": [
         "Deduct one spell slot.",
-        "You cast the spell, and immediately feel it: the presence of powerful undead within this crypt. (continued across…)"
+        "You cast the spell, and immediately feel it: the presence of powerful undead within this crypt."
       ],
       "nextSteps": [
         {
-          "description": "To enter, go to entry CROSSTHRESHOLD",
+          "description": "Enter.",
           "target": "CROSSTHRESHOLD"
         },
         {
-          "description": "Otherwise, you can leave by going to LEAVECEMETERY",
+          "description": "Leave.",
           "target": "LEAVECEMETERY"
         }
       ]
@@ -1283,7 +1283,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Add the ring to your inventory if you desire, and then Return to tilepage 5 and continue from the last direction you read.",
+          "description": "Add the ring to the inventory if desired, and then continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -1295,7 +1295,7 @@
       ],
       "nextSteps": [
         {
-          "description": "You proceed inside. Go to entry CROSSTHRESHOLD",
+          "description": "You proceed inside.",
           "target": "CROSSTHRESHOLD"
         }
       ]
@@ -1307,11 +1307,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If the result is 4, go to entry RETURN",
+          "description": "Rolled 4.",
           "target": "RETURN"
         },
         {
-          "description": "If the result is 1,2 or 3, go to MADEIT",
+          "description": "Rolled 1, 2 or 3.",
           "target": "MADEIT"
         }
       ]
@@ -1324,7 +1324,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CULTISTCOMBAT",
+          "description": "Continue...",
           "target": "CULTISTCOMBAT"
         }
       ]
@@ -1335,11 +1335,11 @@
       ],
       "nextSteps": [
         {
-          "description": "There is a largish pile of boulders nearby. To hide behind these, go to entry HIDEQUICK",
+          "description": "There is a largish pile of boulders nearby. Hide behind these.",
           "target": "HIDEQUICK"
         },
         {
-          "description": "To stand in the open and face whoever approaches (if they come down the hole that is) go to entry NOTAFRAID",
+          "description": "Stand in the open and face whoever approaches (if they come down the hole, that is).",
           "target": "NOTAFRAID"
         }
       ]
@@ -1350,7 +1350,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -1375,7 +1375,7 @@
       "imageId": 4,
       "nextSteps": [
         {
-          "description": "Add these items to your inventory and leave this thieves’ den! Return to tilepage 8 and continue from the last direction you read",
+          "description": "Add these items to the inventory and leave this thieves’ den!",
           "target": "TILEPAGE_8"
         }
       ]
@@ -1389,7 +1389,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to the tilepage 8 entry and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -1404,7 +1404,7 @@
       ],
       "nextSteps": [
         {
-          "description": "To enter the cave, go to entry ENTERCAVE",
+          "description": "Enter the cave.",
           "target": "ENTERCAVE"
         }
       ]
@@ -1416,11 +1416,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To take him up on his offer, go to entry BLESSING",
+          "description": "Take him up on his offer.",
           "target": "BLESSING"
         },
         {
-          "description": "To politely refuse, go to entry DECLINE",
+          "description": "Politely refuse.",
           "target": "DECLINE"
         }
       ]
@@ -1433,11 +1433,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to entry BLADEDODGE",
+          "description": "Success.",
           "target": "BLADEDODGE"
         },
         {
-          "description": "If unsuccessful, go to SWINGER",
+          "description": "Failure.",
           "target": "SWINGER"
         }
       ]
@@ -1450,11 +1450,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to entry ENTRANCETRAP",
+          "description": "Success.",
           "target": "ENTRANCETRAP"
         },
         {
-          "description": "If you fail, go to entry ALLCLEAR",
+          "description": "Failure.",
           "target": "ALLCLEAR"
         }
       ]
@@ -1469,11 +1469,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Are you a cleric? If so, you could try to turn this undead warrior! Go to entry TURNSKELETON",
+          "description": "If a cleric, try to turn this undead warrior!",
           "target": "TURNSKELETON"
         },
         {
-          "description": "If not, you will simply have to hack away at this bag of bones! Go to entry SKELETONBATTLE",
+          "description": "If not, simply hack away at this bag of bones!",
           "target": "SKELETONBATTLE"
         }
       ]
@@ -1484,11 +1484,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you want to investigate the hut? If so, go to entry LITTLEHUT.",
+          "description": "Investigate the hut.",
           "target": "LITTLEHUT"
         },
         {
-          "description": "If not, return to tilepage 6 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -1506,11 +1506,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you defeat the Death Knight, go to entry VICTORIOUS",
+          "description": "Victorious.",
           "target": "VICTORIOUS"
         },
         {
-          "description": "If you are defeated, go to entry VALIANTDEFEAT",
+          "description": "Defeated.",
           "target": "VALIANTDEFEAT"
         }
       ]
@@ -1519,27 +1519,32 @@
       "text": [
         "You leave the cemetery, a little voice inside you chiding you for your cowardice. Scared of a graveyard, a hardened adventurer like you?",
         "You return to the junction and see the grassland ahead. It would be so easy to leave right now, just abandon the quest and depart this area completely.",
-        "If you are still thinking of rescuing Darek Brewmont, you get the nagging feeling that he may be running out of time.",
-        "ENOUGHOFTHIS!",
+        "If you are still thinking of rescuing Darek Brewmont, you get the nagging feeling that he may be running out of time."
+      ],
+      "nextSteps": [
+        {
+          "description": "Abandon the quest and head north towards the grasslands.",
+          "target": "QUESTABANDON"
+        },
+        {
+          "description": "Return to the cemetery.",
+          "target": "TILEPAGE_10"
+        },
+        {
+          "description": "Return south to the four-way junction.",
+          "target": "BACKTOJUNCTION"
+        }
+      ]
+    },
+    "ENOUGHOFTHIS": {
+      "text": [
         "Aborting your attempt to cross the river, you turn and swim back the way you came, finally flopping onto the shore you left from, panting and coughing up water.",
         "Erase your provisions from your inventory – they are ruined!",
         "Finally you get your breath back and assess your situation."
       ],
       "nextSteps": [
         {
-          "description": "To head north towards the grasslands, go to entry QUESTABANDON",
-          "target": "QUESTABANDON"
-        },
-        {
-          "description": "To return to the cemetery, go to tilepage 10 and follow the instructions there",
-          "target": "TILEPAGE_10"
-        },
-        {
-          "description": "Or you may return south to the four-way junction. Go to entry BACKTOJUNCTION",
-          "target": "BACKTOJUNCTION"
-        },
-        {
-          "description": "Return to tilepage 7 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -1551,7 +1556,7 @@
       ],
       "nextSteps": [
         {
-          "description": "You’ll need to keep those ranged attacks going now! Go to entry CULTISTCOMBAT",
+          "description": "Keep those ranged attacks going now!",
           "target": "CULTISTCOMBAT"
         }
       ]
@@ -1562,7 +1567,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to sub-map 1 and then proceed to the sub-map 1 entry in this booklet.",
+          "description": "Continue...",
           "target": "SUBMAP_1"
         }
       ]
@@ -1580,15 +1585,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To inspect the area around the altar, go to entry INSPECTALTAR",
+          "description": "Inspect the area around the altar.",
           "target": "INSPECTALTAR"
         },
         {
-          "description": "To have a general search around the room, go to entry EXPLOREROOM",
+          "description": "Have a general search around the room.",
           "target": "EXPLOREROOM"
         },
         {
-          "description": "To turn around and leave, return to tilepage 3 and continue from the last direction you read.",
+          "description": "Turn around and leave.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1605,11 +1610,11 @@
       "imageId": 5,
       "nextSteps": [
         {
-          "description": "To check the entrance for traps, go to GATETRAP",
+          "description": "Check the entrance for traps.",
           "target": "GATETRAP"
         },
         {
-          "description": "To skip that part and just open the gates, go to GETINSIDE",
+          "description": "Skip that part and just open the gates.",
           "target": "GETINSIDE"
         }
       ]
@@ -1620,15 +1625,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you want to try and disarm it? You will need thieves’ tools to do so. If you want to attempt this, go to entry NIMBLEFINGERS",
+          "description": "Try and disarm it using thieves’ tools.",
           "target": "NIMBLEFINGERS"
         },
         {
-          "description": "If you don’t have thieves’ tools, but want to try and open the door anyway, go to entry OPENSTONEDOOR",
+          "description": "Without thieves’ tools, try and open the door anyway.",
           "target": "OPENSTONEDOOR"
         },
         {
-          "description": "If you would rather leave it and continue north, Return to tilepage 3 and continue from the last direction you read",
+          "description": "Leave it and continue north.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1642,7 +1647,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -1656,7 +1661,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Wasting no more time, you get out of there quickly! Go to entry SCARPER",
+          "description": "Wasting no more time, get out of there quickly!",
           "target": "SCARPER"
         }
       ]
@@ -1668,15 +1673,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you score 1-10, go to entry NOTBAD.",
+          "description": "Scored 1-10.",
           "target": "NOTBAD"
         },
         {
-          "description": "If you score 11-15, go to entry BETTER",
+          "description": "Scored 11-15.",
           "target": "BETTER"
         },
         {
-          "description": "If you score 16 or above, go to entry REALLYGOOD",
+          "description": "Scored 16 or above.",
           "target": "REALLYGOOD"
         }
       ]
@@ -1687,7 +1692,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to the tilepage 8 entry and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -1698,7 +1703,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry ZOMBIEBATTLE",
+          "description": "Continue...",
           "target": "ZOMBIEBATTLE"
         }
       ]
@@ -1709,7 +1714,7 @@
       ],
       "nextSteps": [
         {
-          "description": "To move forward and investigate the crypt doors, go to entry ENTRANCETOMB",
+          "description": "Move forward and investigate the crypt doors.",
           "target": "ENTRANCETOMB"
         }
       ]
@@ -1720,11 +1725,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To answer “Yes, I would!” go to entry BLESSING",
+          "description": "Answer “Yes, I would!”",
           "target": "BLESSING"
         },
         {
-          "description": "To answer, “No thanks, that’s allright,” go to entry DECLINE",
+          "description": "Answer, “No thanks, that’s allright,”",
           "target": "DECLINE"
         }
       ]
@@ -1740,11 +1745,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry ZEALOTSSNOMORE",
+          "description": "Successful.",
           "target": "ZEALOTSSNOMORE"
         },
         {
-          "description": "If you are defeated, go to entry OHWELL",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -1755,11 +1760,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To ditch your pack, go to DITCHPACK",
+          "description": "Ditch your pack.",
           "target": "DITCHPACK"
         },
         {
-          "description": "To try and keep hold of your pack, go to SKETCHY",
+          "description": "Try and keep hold of your pack.",
           "target": "SKETCHY"
         }
       ]
@@ -1770,11 +1775,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Did you suceed in an earlier stealth check? If so, go to entry HEREWEGO.",
+          "description": "Suceeded in an earlier stealth check.",
           "target": "HEREWEGO"
         },
         {
-          "description": "If you did not make a stealth check, or if you failed one, go to entry OHNO.",
+          "description": "Did not make a stealth check, or failed one.",
           "target": "OHNO"
         }
       ]
@@ -1785,7 +1790,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -1797,11 +1802,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To head towards this light source, go to entry TOTHELIGHT",
+          "description": "Head towards this light source.",
           "target": "TOTHELIGHT"
         },
         {
-          "description": "To leave this place and climb back up to the surface, return to tilepage 8 and continue from the last direction you read.",
+          "description": "Leave this place and climb back up to the surface.",
           "target": "TILEPAGE_8"
         }
       ]
@@ -1813,7 +1818,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1824,27 +1829,27 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you know any flame-producing cantrips or spells? Or, do you possess Alchemists Fire? If so, go to entry BURNWEB.",
+          "description": "Cast any flame-producing cantrip or spell, or throw Alchemists Fire?",
           "target": "BURNWEB"
         },
         {
-          "description": "What about the Mage Hand cantrip? If you want to try this, go to entry SHIFTWEB.",
+          "description": "Cast the Mage Hand cantrip.",
           "target": "SHIFTWEB"
         },
         {
-          "description": "Thunderwave spell? Go to entry THUNDERWEB.",
+          "description": "Cast the Thunderwave spell.",
           "target": "THUNDERWEB"
         },
         {
-          "description": "If you want to try and use ordinary fire to burn them away, go to entry FLAMEWEB.",
+          "description": "Try and use ordinary fire to burn them away.",
           "target": "FLAMEWEB"
         },
         {
-          "description": "If you’d prefer to try and move them with your weapon, go to entry SLASHWEB",
+          "description": "Try and move them with your weapon.",
           "target": "SLASHWEB"
         },
         {
-          "description": "Or, you could just throw something at the web and see what happens? Go to TESTWEB",
+          "description": "Throw something at the web and see what happens.",
           "target": "TESTWEB"
         }
       ]
@@ -1856,7 +1861,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -1869,7 +1874,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -1882,7 +1887,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -1895,11 +1900,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To inspect this cloak, go to entry CLOAKCHECK",
+          "description": "Inspect this cloak.",
           "target": "CLOAKCHECK"
         },
         {
-          "description": "To ignore it and keep going, Return to tilepage 3 and continue from the last direction you read",
+          "description": "Ignore it and keep going.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -1917,11 +1922,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you tell this thief of your quest? Go to DISCLOSURE",
+          "description": "Tell this thief of your quest.",
           "target": "DISCLOSURE"
         },
         {
-          "description": "Or will you make something up? Go to SPINYARN",
+          "description": "Make something up.",
           "target": "SPINYARN"
         }
       ]
@@ -1932,11 +1937,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to DEVIOUS",
+          "description": "Successful.",
           "target": "DEVIOUS"
         },
         {
-          "description": "If unsuccessful, go to BATEDBREATH",
+          "description": "Unsuccessful.",
           "target": "BATEDBREATH"
         }
       ]
@@ -1949,11 +1954,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you know the spell Detect Good and Evil? You can cast it by going to DETECTEVIL",
+          "description": "Cast the spell Detect Good and Evil.",
           "target": "DETECTEVIL"
         },
         {
-          "description": "Alternately, you can move inside by going to entry CROSSTHRESHOLD",
+          "description": "Move inside.",
           "target": "CROSSTHRESHOLD"
         }
       ]
@@ -1965,7 +1970,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -1979,11 +1984,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To investigate the little house, go to entry LITTLEHUT",
+          "description": "Investigate the little house.",
           "target": "LITTLEHUT"
         },
         {
-          "description": "To ignore the little house and continue down the path, return to tilepage 6 and continue from the last direction you read.",
+          "description": "Ignore the little house and continue down the path.",
           "target": "TILEPAGE_6"
         }
       ]
@@ -2001,11 +2006,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are victorious, go to entry DEADGOBLINS",
+          "description": "Victorious.",
           "target": "DEADGOBLINS"
         },
         {
-          "description": "If you are defeated go to OHWELL",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -2017,7 +2022,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -2028,7 +2033,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry DEADNELLY.",
+          "description": "Continue...",
           "target": "DEADNELLY"
         }
       ]
@@ -2041,11 +2046,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to NETESCAPE",
+          "description": "Success.",
           "target": "NETESCAPE"
         },
         {
-          "description": "If you fail, go to ROUNDONE",
+          "description": "Failure.",
           "target": "ROUNDONE"
         }
       ]
@@ -2057,15 +2062,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To proceed towards the crypt, go to SOFTLY",
+          "description": "Proceed towards the crypt.",
           "target": "SOFTLY"
         },
         {
-          "description": "To leave the cemetery, go to LEAVECEMETERY",
+          "description": "Leave the cemetery.",
           "target": "LEAVECEMETERY"
         },
         {
-          "description": "Are you a barbarian? If so, go to entry BEARINGS",
+          "description": "Continue if a barbarian.",
           "target": "BEARINGS"
         }
       ]
@@ -2085,7 +2090,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -2099,7 +2104,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry WHATSMYFATE",
+          "description": "Continue...",
           "target": "WHATSMYFATE"
         }
       ]
@@ -2112,7 +2117,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -2123,11 +2128,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To enter the passage, go to ENTERPASSAGE",
+          "description": "Enter the passage.",
           "target": "ENTERPASSAGE"
         },
         {
-          "description": "To leave and continue north, go back to tilepage 3 and continue from the last line you read.",
+          "description": "Leave and continue north.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -2144,7 +2149,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPOILSOFADVENTURE",
+          "description": "Continue...",
           "target": "SPOILSOFADVENTURE"
         }
       ]
@@ -2155,7 +2160,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPIDERBATTLE.",
+          "description": "Continue...",
           "target": "SPIDERBATTLE"
         }
       ]
@@ -2166,7 +2171,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -2178,11 +2183,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry INVISIBLE",
+          "description": "Successful.",
           "target": "INVISIBLE"
         },
         {
-          "description": "If you are unsuccessful, go to entry SLOPPY",
+          "description": "Unsuccessful.",
           "target": "SLOPPY"
         }
       ]
@@ -2197,7 +2202,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry BLADEPOINT",
+          "description": "Continue...",
           "target": "BLADEPOINT"
         }
       ]
@@ -2208,11 +2213,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you want to try and open the chest, go to PICKLOCK",
+          "description": "Try and open the chest.",
           "target": "PICKLOCK"
         },
         {
-          "description": "If you would rather try something else, return to entry TOTHELIGHT and choose another option from the bottom of that entry",
+          "description": "Try something else.",
           "target": "TOTHELIGHT"
         }
       ]
@@ -2228,11 +2233,11 @@
       ],
       "nextSteps": [
         {
-          "description": "There is a largish pile of boulders nearby. To hide behind these, go to entry HIDEQUICK",
+          "description": "There is a largish pile of boulders nearby. Hide behind these.",
           "target": "HIDEQUICK"
         },
         {
-          "description": "To stand in the open and face whoever approaches (if they come down the hole that is) go to entry NOTAFRAID",
+          "description": "Stand in the open and face whoever approaches (if they come down the hole, that is).",
           "target": "NOTAFRAID"
         }
       ]
@@ -2244,11 +2249,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to entry UNFROZEN",
+          "description": "Successful.",
           "target": "UNFROZEN"
         },
         {
-          "description": "If you fail, go to entry PRESERVED",
+          "description": "Unsuccessful.",
           "target": "PRESERVED"
         }
       ]
@@ -2259,7 +2264,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to CABINENTRY",
+          "description": "Continue...",
           "target": "CABINENTRY"
         }
       ]
@@ -2272,7 +2277,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry OHWELL",
+          "description": "Continue...",
           "target": "OHWELL"
         }
       ]
@@ -2295,15 +2300,15 @@
       ],
       "nextSteps": [
         {
-          "description": "“Hell yeah, sign me up!” Go to entry DARKQUEST",
+          "description": "“Hell yeah, sign me up!”",
           "target": "DARKQUEST"
         },
         {
-          "description": "“Aaahhh yeah, the first part of what you say, I can do that. But the whole becoming your general thing… Not so sure.” Go to entry NEGOTIATE",
+          "description": "“Aaahhh yeah, the first part of what you say, I can do that. But the whole becoming your general thing… Not so sure.”",
           "target": "NEGOTIATE"
         },
         {
-          "description": "“Do you know what Blood Knight? Take your Sword of Whatever and stick it where the sun don’t shine!” Go to entry BALLSYMOVE",
+          "description": "“Do you know what Blood Knight? Take your Sword of Whatever and stick it where the sun don’t shine!”",
           "target": "BALLSYMOVE"
         }
       ]
@@ -2319,7 +2324,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Once you have completed your attack, go to KNIGHTATTACK",
+          "description": "Completed attack.",
           "target": "KNIGHTATTACK"
         }
       ]
@@ -2331,11 +2336,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you wish to inspect the room, go to entry EXPLOREROOM",
+          "description": "Inspect the room.",
           "target": "EXPLOREROOM"
         },
         {
-          "description": "If you are done here, and wish to leave, go to entry LEAVECHAMBER",
+          "description": "Leave.",
           "target": "LEAVECHAMBER"
         }
       ]
@@ -2348,7 +2353,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -2361,7 +2366,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go back to tilepage 2 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_2"
         }
       ]
@@ -2373,7 +2378,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read, making sure you leave the area quickly!",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -2384,7 +2389,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Move your token to Sub-map 4 and follow the directions there",
+          "description": "Continue...",
           "target": "SUBMAP_4"
         }
       ]
@@ -2395,7 +2400,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry DOGLEG",
+          "description": "Continue...",
           "target": "DOGLEG"
         }
       ]
@@ -2406,7 +2411,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry RISE",
+          "description": "Continue...",
           "target": "RISE"
         }
       ]
@@ -2420,7 +2425,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -2431,11 +2436,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to SAFEASHOUSES",
+          "description": "Successful.",
           "target": "SAFEASHOUSES"
         },
         {
-          "description": "If unsuccessful, go to COASTCLEAR",
+          "description": "Unsuccessful.",
           "target": "COASTCLEAR"
         }
       ]
@@ -2449,11 +2454,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you have a ranged weapon? If so, and you wish to attack using it, go to entry SHOOTAFTER.",
+          "description": "Attack using a ranged weapon.",
           "target": "SHOOTAFTER"
         },
         {
-          "description": "If not, go to entry DEADNELLY.",
+          "description": "Continue...",
           "target": "DEADNELLY"
         }
       ]
@@ -2468,7 +2473,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Then go to entry TOSSER",
+          "description": "Continue...",
           "target": "TOSSER"
         }
       ]
@@ -2480,7 +2485,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -2496,11 +2501,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are victorious, go to entry DEADLIZARDS",
+          "description": "Victorious.",
           "target": "DEADLIZARDS"
         },
         {
-          "description": "If you are defeated, go to entry OHWELL",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -2512,11 +2517,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Did you do any two things from the following list: check the scrolls for clues / try to open the chest / read the strange markings. If you did do two from this list, go to entry DILLYDALLY",
+          "description": "At least two things from the following list we done: check the scrolls for clues / try to open the chest / read the strange markings.",
           "target": "DILLYDALLY"
         },
         {
-          "description": "If you only did one thing, or if you did none of these things, then you return to the surface. Go to tilepage 8 and continue from the last direction you read",
+          "description": "Return to the surface, as one or less of these things we done.",
           "target": "TILEPAGE_8"
         }
       ]
@@ -2527,7 +2532,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -2540,11 +2545,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you still wish to leave the cemetery, go to entry EASYPATH",
+          "description": "Still leave the cemetery.",
           "target": "EASYPATH"
         },
         {
-          "description": "If you decide to turn back and make your way through the cemetery towards the crypt, go to entry SOFTLY",
+          "description": "Turn around and make way through the cemetery towards the crypt.",
           "target": "SOFTLY"
         }
       ]
@@ -2556,7 +2561,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -2568,15 +2573,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To cast Detect Magic on the tree, go to MAGICTREE",
+          "description": "Cast Detect Magic on the tree.",
           "target": "MAGICTREE"
         },
         {
-          "description": "To take a branch from the tree, go to TAKEBRANCH",
+          "description": "Take a branch from the tree.",
           "target": "TAKEBRANCH"
         },
         {
-          "description": "To return to the path, go to REJOINPATH",
+          "description": "Return to the path.",
           "target": "REJOINPATH"
         }
       ]
@@ -2588,15 +2593,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To make your camp in the northeast corner of the junction, go to NORTHEASTCAMP",
+          "description": "Make camp in the northeast corner of the junction.",
           "target": "NORTHEASTCAMP"
         },
         {
-          "description": "To make your camp in the northwest corner, go to CAMPNORTHWEST",
+          "description": "Make camp in the northwest corner.",
           "target": "CAMPNORTHWEST"
         },
         {
-          "description": "To continue, despite your fatigue, return to the tilepage 8 entry and continue from the last direction you read.",
+          "description": "Continue, despite your fatigue.",
           "target": "TILEPAGE_8"
         }
       ]
@@ -2608,11 +2613,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry HUTTRAPS",
+          "description": "Successful.",
           "target": "HUTTRAPS"
         },
         {
-          "description": "If you are unsuccessful, go to entry WELLDAMN",
+          "description": "Unsuccessful.",
           "target": "WELLDAMN"
         }
       ]
@@ -2624,7 +2629,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry TUNNELVISION",
+          "description": "Continue...",
           "target": "TUNNELVISION"
         }
       ]
@@ -2635,7 +2640,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -2646,7 +2651,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Roll 2d8 and half the result. Go to entry SPIDERBATTLE and commence combat, deducting that number from each spider’s HP.",
+          "description": "Roll 2d8 and half the result. Commence combat, deducting that number from each spider’s HP.",
           "target": "HP"
         }
       ]
@@ -2659,11 +2664,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Move to the edge of the tilepage and onto tilepage 6 immediately!",
+          "description": "Go south immediately!",
           "target": "TILEPAGE_6"
         },
         {
-          "description": "Move to the edge of the tilepage and onto tilepage 8 immediately!",
+          "description": "Go west immediately!",
           "target": "TILEPAGE_8"
         }
       ]
@@ -2675,7 +2680,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CULTISTCOMBAT",
+          "description": "Fight the woman.",
           "target": "CULTISTCOMBAT"
         }
       ]
@@ -2683,7 +2688,7 @@
     "MAGICDIVERSION": {
       "text": [
         "Focusing, you create the most impressive illusion that you can muster, and prepare to run!",
-        "Roll a d20, subtracting one of the modifiers listed below, based on the spell cast:",
+        "Roll a d20 against your spell save DC, subtracting one of the modifiers listed below, based on the spell cast:",
         "Thaumaturgy -5",
         "Minor Illusion -4",
         "Silent Image -3",
@@ -2692,11 +2697,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If the result is lower than your spell save DC, go to entry SMOKEANDMIRRORS",
+          "description": "The result is lower.",
           "target": "SMOKEANDMIRRORS"
         },
         {
-          "description": "If the result is higher than your spell save DC, go to HISSANDABANG",
+          "description": "The result is equal or higher.",
           "target": "HISSANDABANG"
         }
       ]
@@ -2709,15 +2714,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To take a branch from the tree, go to TAKEBRANCH",
+          "description": "Take a branch from the tree.",
           "target": "TAKEBRANCH"
         },
         {
-          "description": "To climb the tree, go to TREECLIMB",
+          "description": "Climb the tree.",
           "target": "TREECLIMB"
         },
         {
-          "description": "To return to the path, go to REJOINPATH",
+          "description": "Return to the path.",
           "target": "REJOINPATH"
         }
       ]
@@ -2733,11 +2738,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To search the pile of books and scrolls for clues, go to SEARCHCLUES",
+          "description": "Search the pile of books and scrolls for clues.",
           "target": "SEARCHCLUES"
         },
         {
-          "description": "To leave this thieves’ lair, go to entry LEAVECAVE",
+          "description": "Leave this thieves’ lair.",
           "target": "LEAVECAVE"
         }
       ]
@@ -2749,11 +2754,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To open one of the coffins, go to entry OPENCOFFIN",
+          "description": "Open one of the coffins.",
           "target": "OPENCOFFIN"
         },
         {
-          "description": "To proceed to the exit, go to ISHALLPROCEED",
+          "description": "Proceed to the exit.",
           "target": "ISHALLPROCEED"
         }
       ]
@@ -2764,7 +2769,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry HEREWEGO",
+          "description": "Continue...",
           "target": "HEREWEGO"
         }
       ]
@@ -2782,11 +2787,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you defeat the bat, go to SLEEPRUINED",
+          "description": "Victorious.",
           "target": "SLEEPRUINED"
         },
         {
-          "description": "If you are defeated, go to OHWELL",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -2816,7 +2821,7 @@
       ],
       "nextSteps": [
         {
-          "description": "When you are done with the travelling merchant, go to entry FRIENDLYCHAP",
+          "description": "Done with the travelling merchant.",
           "target": "FRIENDLYCHAP"
         }
       ]
@@ -2827,7 +2832,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry DEADNELLY",
+          "description": "Continue...",
           "target": "DEADNELLY"
         }
       ]
@@ -2838,11 +2843,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry PATHDANGER",
+          "description": "Successful.",
           "target": "PATHDANGER"
         },
         {
-          "description": "If you are unsuccessful, go to SEEMSNOT",
+          "description": "Unsuccessful.",
           "target": "SEEMSNOT"
         }
       ]
@@ -2854,11 +2859,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to FUNKYFUNGI",
+          "description": "Successful.",
           "target": "FUNKYFUNGI"
         },
         {
-          "description": "If you fail, go to MUNGUSFUNGUS",
+          "description": "Unsuccessful.",
           "target": "MUNGUSFUNGUS"
         }
       ]
@@ -2869,7 +2874,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to sub-map 2 and follow the directions there",
+          "description": "Continue...",
           "target": "SUBMAP_2"
         }
       ]
@@ -2880,18 +2885,19 @@
       ],
       "nextSteps": [
         {
-          "description": "Add the green fungi to your inventory if you wish, and then return to tilepage 4 and continue from the last direction you read",
+          "description": "Add the green fungi to the inventory if you wish, and then continue...",
           "target": "TILEPAGE_4"
         }
       ]
     },
     "NASTYBITE": {
       "text": [
-        "A GIANT CENTIPEDE has dug its pincers into your hand, drawing blood, the ghastly thing!"
+        "A GIANT CENTIPEDE has dug its pincers into your hand, drawing blood, the ghastly thing!",
+        "Roll 1d4+2 and subtract the damage from your HP."
       ],
       "nextSteps": [
         {
-          "description": "Roll 1d4+2 and subtract the damage from your HP. Then go to entry CENTIBATTLE",
+          "description": "Continue...",
           "target": "CENTIBATTLE"
         }
       ]
@@ -2902,15 +2908,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you score 1-25, go to PESKY",
+          "description": "Scored 1-25.",
           "target": "PESKY"
         },
         {
-          "description": "If you score 26-50, go to WHATSTHIS",
+          "description": "Scored 26-50.",
           "target": "WHATSTHIS"
         },
         {
-          "description": "If you score 51 or above go to NOTAWHISPER",
+          "description": "Scored 51 or above.",
           "target": "NOTAWHISPER"
         }
       ]
@@ -2921,11 +2927,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you still voice your disapproval, go to NOFEAR",
+          "description": "Still voice disapproval.",
           "target": "NOFEAR"
         },
         {
-          "description": "If you bow to this intimidating warrior and accept his quest, go to DARKQUEST",
+          "description": "Bow to this intimidating warrior and accept his quest.",
           "target": "DARKQUEST"
         }
       ]
@@ -2936,7 +2942,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to GOBLINBATTLE",
+          "description": "Continue...",
           "target": "GOBLINBATTLE"
         }
       ]
@@ -2948,7 +2954,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -2960,7 +2966,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -2973,7 +2979,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction your read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -2985,11 +2991,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to entry HARMLESS",
+          "description": "Successful.",
           "target": "HARMLESS"
         },
         {
-          "description": "If you fail go to entry TRIGGERED",
+          "description": "Unsuccessful.",
           "target": "TRIGGERED"
         }
       ]
@@ -3003,7 +3009,7 @@
       ],
       "nextSteps": [
         {
-          "description": "To enter the cave, got to entry ENTERCAVE",
+          "description": "Enter the cave.",
           "target": "ENTERCAVE"
         }
       ]
@@ -3016,22 +3022,23 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you bow, and accept the quest? If so, go to DARKQUEST",
+          "description": "Bow, and accept the quest.",
           "target": "DARKQUEST"
         },
         {
-          "description": "Or do you still resist? Go to RESIST",
+          "description": "Still resist.",
           "target": "RESIST"
         }
       ]
     },
     "NOOBTHIEF": {
       "text": [
-        "Carefully you work with your tools, trying to dismantle the catch mechanism. But your hands are a little shaky, and you slip, accidentally knocking what looks like the trigger!"
+        "Carefully you work with your tools, trying to dismantle the catch mechanism. But your hands are a little shaky, and you slip, accidentally knocking what looks like the trigger!",
+        "*Perform the following save with advantage, as you are expecting it*"
       ],
       "nextSteps": [
         {
-          "description": "Go to entry VAPOUR (perform the save there with advantage, as you are expecting it)",
+          "description": "Continue...",
           "target": "VAPOUR"
         }
       ]
@@ -3044,7 +3051,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry PURSUED",
+          "description": "Continue...",
           "target": "PURSUED"
         }
       ]
@@ -3055,7 +3062,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry MAUSOLEUM",
+          "description": "Continue...",
           "target": "MAUSOLEUM"
         }
       ]
@@ -3069,7 +3076,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry NIGHTNIGHT",
+          "description": "Continue...",
           "target": "NIGHTNIGHT"
         }
       ]
@@ -3084,19 +3091,19 @@
       ],
       "nextSteps": [
         {
-          "description": "Are you a rogue? If so, go to INTHEKNOW",
+          "description": "Continue if a rogue.",
           "target": "INTHEKNOW"
         },
         {
-          "description": "Do you know any of the following spells: Druidcraft, Prestidigitation, Thaumaturgy, Minor Illusion, Silent Image? If so, you could cast one of these by going to MAGICDIVERSION",
+          "description": "Cast one of the following spells: Druidcraft, Prestidigitation, Thaumaturgy, Minor Illusion, Silent Image.",
           "target": "MAGICDIVERSION"
         },
         {
-          "description": "If not, you could throw down your weapon? Go to entry SURRENDER",
+          "description": "Throw down your weapon.",
           "target": "SURRENDER"
         },
         {
-          "description": "Or, you could attempt to talk your way out of this situation. Go to entry CHARMTHEPANTS",
+          "description": "Attempt to talk your way out of this situation.",
           "target": "CHARMTHEPANTS"
         }
       ]
@@ -3108,7 +3115,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -3118,16 +3125,17 @@
         "You search around the various nooks and crannies, and finally your search turns up something that may be of use; a quarterstaff!",
         "You pick it up and it feels light, easy to wield. You give it a couple of swings and it seems to almost be aiding your technique.",
         "There is something to this weapon. You’ve used staves before, but this is certainly the best of its kind you’ve ever handled. Indeed, you think it might be imbued with magic of some kind.",
-        "Add a Quarterstaff+1 to your inventory, if you so wish! Nice find!",
-        "Inspired by this find, you think to yourself there must be more to find around here. You see an item within an alcove, and reach in to grab it. But as you do, something lashes out at your hand!"
+        "*Add a +1 Quarterstaff to your inventory, if you so wish! Nice find!*",
+        "Inspired by this find, you think to yourself there must be more to find around here. You see an item within an alcove, and reach in to grab it. But as you do, something lashes out at your hand!",
+        "*Roll 1d20 + 4 against your AC.*"
       ],
       "nextSteps": [
         {
-          "description": "Roll 1d20 +4. If the result is higher than your AC, go to entry NASTYBITE.",
+          "description": "The result is equal or higher.",
           "target": "NASTYBITE"
         },
         {
-          "description": "If it is lower, go to entry BITEME",
+          "description": "The result is lower.",
           "target": "BITEME"
         }
       ]
@@ -3139,7 +3147,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 1 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_1"
         }
       ]
@@ -3150,7 +3158,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SKELETONBATTLE",
+          "description": "Continue...",
           "target": "SKELETONBATTLE"
         }
       ]
@@ -3161,7 +3169,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 2 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_2"
         }
       ]
@@ -3170,15 +3178,15 @@
       "text": [
         "You make a few attempts to pull yourself up into the red tree’s branches, but try as you might you just can’t get yourself up there!",
         "Athletic feats were never your strong suit, you tell yourself.",
-        "(continued across…) What would you like to do now?"
+        "What would you like to do now?"
       ],
       "nextSteps": [
         {
-          "description": "To take a branch from the red tree, go to TAKEBRANCH",
+          "description": "Take a branch from the red tree.",
           "target": "TAKEBRANCH"
         },
         {
-          "description": "To go back to the path, go to entry REJOINPATH",
+          "description": "Return to the path.",
           "target": "REJOINPATH"
         }
       ]
@@ -3187,14 +3195,27 @@
       "text": [
         "The mage hand moves in amongst the webs and begins trying to gather the gossamer strands onto its fingers… but no luck. It does not have the power to shift these threads, which are quite strong despite their thinness.",
         "Suddenly, you feel something pounce on you from behind! Your noisy progress through the forest must have alerted it to your presence. You turn frantically, trying to get the thing off, whatever it is.",
-        "Roll a d20+3. If the result is higher than your AC, go to entry SURPRISECRAWLY.",
-        "If not, read on below.",
+        "Roll a d20+3 against your AC."
+       ],
+       "nextSteps": [
+        {
+          "description": "The result is equal or higher.",
+          "target": "SURPRISECRAWLY"
+        },
+        {
+          "description": "The result is lower.",
+          "target": "OHNO2"
+        }
+      ]
+    },
+    "OHNO2": {
+      "text": [
         "You manage to get the thing off your shoulder, and can now have a good look at it.",
         "A GIANT WOLF SPIDER is before you, hissing horribly. It is quickly joined by a mate, and they both attack you!"
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPIDERBATTLE.",
+          "description": "Continue...",
           "target": "SPIDERBATTLE"
         }
       ]
@@ -3246,7 +3267,7 @@
       ],
       "nextSteps": [
         {
-          "description": "There is little left to do but proceed to the exit on the far side of the room. Go to ISHALLPROCEED",
+          "description": "There is little left to do but proceed to the exit on the far side of the room.",
           "target": "ISHALLPROCEED"
         }
       ]
@@ -3258,7 +3279,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry TRIGGERED.",
+          "description": "Continue...",
           "target": "TRIGGERED"
         }
       ]
@@ -3270,11 +3291,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To have a look around, go to entry INVESTIGATESPIDERS.",
+          "description": "Have a look around.",
           "target": "INVESTIGATESPIDERS"
         },
         {
-          "description": "To keep going, go back to tilepage 2 and continue from the last direction you read.",
+          "description": "Keep going.",
           "target": "TILEPAGE_2"
         }
       ]
@@ -3285,11 +3306,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful go to entry WHEW",
+          "description": "Successful.",
           "target": "WHEW"
         },
         {
-          "description": "If you are unsuccessful go to entry FLAILING",
+          "description": "Unsuccessful.",
           "target": "FLAILING"
         }
       ]
@@ -3301,19 +3322,19 @@
       ],
       "nextSteps": [
         {
-          "description": "To take a branch from the tree, go to TAKEBRANCH",
+          "description": "Take a branch from the tree.",
           "target": "TAKEBRANCH"
         },
         {
-          "description": "To take some leaves from this tree, go to LEAVES",
+          "description": "Take some leaves from this tree.",
           "target": "LEAVES"
         },
         {
-          "description": "To climb the tree, go to TREECLIMB",
+          "description": "Climb the tree.",
           "target": "TREECLIMB"
         },
         {
-          "description": "To return to the path, go to REJOINPATH",
+          "description": "Return to the path.",
           "target": "REJOINPATH"
         }
       ]
@@ -3325,7 +3346,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CIRCULARROOM",
+          "description": "Continue...",
           "target": "CIRCULARROOM"
         }
       ]
@@ -3339,27 +3360,27 @@
       ],
       "nextSteps": [
         {
-          "description": "If you want to go off the path and pass the tree on the right hand side, go to entry GOAROUND",
+          "description": "Go off the path and pass the tree on the right hand side.",
           "target": "GOAROUND"
         },
         {
-          "description": "If you want to drop to the ground and go under the level of the glyph, go to DUCKUNDER",
+          "description": "Drop to the ground and go under the level of the glyph.",
           "target": "DUCKUNDER"
         },
         {
-          "description": "You could backtrack to tilepage 3 if that is wherever you came from and move your token onto the top square",
-          "target": "TILEPAGE_3"
+          "description": "Backtrack south if coming from there.",
+          "target": "TILEPAGE_2"
         },
         {
-          "description": "You could backtrack to tilepage 9 if that is wherever you came from and move your token onto the bottom square",
+          "description": "Backtrack north if coming from there.",
           "target": "TILEPAGE_9"
         },
         {
-          "description": "If you want to ignore the glyph and continue north, go to entry WHATAWAITS",
+          "description": "Ignore the glyph and continue north.",
           "target": "WHATAWAITS"
         },
         {
-          "description": "The entrance to the house is closer on the path than the glyph. To visit the house without walking past the glyph, go to entry LITTLEHUT",
+          "description": "The entrance to the house is closer on the path than the glyph. Visit the house without walking past the glyph.",
           "target": "LITTLEHUT"
         }
       ]
@@ -3371,7 +3392,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -3386,11 +3407,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If so, go to entry STAKEDRIVE",
+          "description": "Yes.",
           "target": "STAKEDRIVE"
         },
         {
-          "description": "If not, go to entry NOREDSTAKE",
+          "description": "No.",
           "target": "NOREDSTAKE"
         }
       ]
@@ -3401,7 +3422,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry MAUSOLEUM",
+          "description": "Continue...",
           "target": "MAUSOLEUM"
         }
       ]
@@ -3412,11 +3433,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If it is 15 or above, go to entry WISETOYOU",
+          "description": "15 or above.",
           "target": "WISETOYOU"
         },
         {
-          "description": "If it is 14 or below, go to entry GOTTHEDROP",
+          "description": "14 or below.",
           "target": "GOTTHEDROP"
         }
       ]
@@ -3431,15 +3452,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Hide until the figure has passed? Go to entry SKULKAWAY",
+          "description": "Hide until the figure has passed.",
           "target": "SKULKAWAY"
         },
         {
-          "description": "Draw your weapon and challenge the mounted warrior? Go to entry CHALLENGE",
+          "description": "Draw your weapon and challenge the mounted warrior.",
           "target": "CHALLENGE"
         },
         {
-          "description": "Fire a ranged attack at the rider? Go to entry UNSEAT",
+          "description": "Fire a ranged attack at the rider.",
           "target": "UNSEAT"
         }
       ]
@@ -3451,7 +3472,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry VAPOUR",
+          "description": "Continue...",
           "target": "VAPOUR"
         }
       ]
@@ -3463,7 +3484,7 @@
       ],
       "nextSteps": [
         {
-          "description": "You may take the shortsword if you wish. Return to tilepage 6 and continue from the last direction you read.",
+          "description": "The shortsword can be taken.",
           "target": "TILEPAGE_6"
         }
       ]
@@ -3474,7 +3495,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -3485,7 +3506,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CULTISTCOMBAT",
+          "description": "Continue...",
           "target": "CULTISTCOMBAT"
         }
       ]
@@ -3496,7 +3517,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry KOBOLDBATTLE",
+          "description": "Continue...",
           "target": "KOBOLDBATTLE"
         }
       ]
@@ -3510,7 +3531,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry AWAKE",
+          "description": "Continue...",
           "target": "AWAKE"
         }
       ]
@@ -3521,11 +3542,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If so, go to entry HASTYCARAVAN",
+          "description": "Yes.",
           "target": "HASTYCARAVAN"
         },
         {
-          "description": "If not, go to entry UNEASYVICTORY",
+          "description": "No.",
           "target": "UNEASYVICTORY"
         }
       ]
@@ -3537,7 +3558,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -3550,7 +3571,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry OHWELL",
+          "description": "Continue...",
           "target": "OHWELL"
         }
       ]
@@ -3573,7 +3594,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry KEEPGOING",
+          "description": "Continue...",
           "target": "KEEPGOING"
         }
       ]
@@ -3584,7 +3605,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 1 and choose which adjoining map to move to.",
+          "description": "Continue...",
           "target": "TILEPAGE_1"
         }
       ]
@@ -3595,7 +3616,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -3606,15 +3627,16 @@
         "Here lies Roghan, Cleric of Llorkh. Born a peasant, lived as a saint and hero, died a martyr.",
         "And another:",
         "Laid to rest eternally, Lady Rottridge of the Vale. A matriarch and benefactor, survived by Lord Rottridge and their son Petrus.",
-        "It seems this little cemetery is filled with lords, ladies and adventurers of high distinction."
+        "It seems this little cemetery is filled with lords, ladies and adventurers of high distinction.",
+        "Have you already checked for traps?"
       ],
       "nextSteps": [
         {
-          "description": "Have you already checked for traps? If so, go to entry DEADEND.",
+          "description": "Yes.",
           "target": "DEADEND"
         },
         {
-          "description": "If not, go to entry DEATHBED",
+          "description": "No.",
           "target": "DEATHBED"
         }
       ]
@@ -3627,7 +3649,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CRITICAL",
+          "description": "Continue...",
           "target": "CRITICAL"
         }
       ]
@@ -3644,11 +3666,11 @@
       "imageId": 6,
       "nextSteps": [
         {
-          "description": "If you wish to try and open the chest, go to entry OPENCHEST",
+          "description": "Try and open the chest.",
           "target": "OPENCHEST"
         },
         {
-          "description": "If you want to search the pile of books and scrolls for clues, go to SEARCHCLUES",
+          "description": "Search the pile of books and scrolls for clues.",
           "target": "SEARCHCLUES"
         }
       ]
@@ -3666,11 +3688,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you would like to investigate the area around the altar, go to entry INSPECTALTAR",
+          "description": "Investigate the area around the altar.",
           "target": "INSPECTALTAR"
         },
         {
-          "description": "Or you can leave by going to entry LEAVECHAMBER",
+          "description": "Leave the chamber.",
           "target": "LEAVECHAMBER"
         }
       ]
@@ -3684,27 +3706,27 @@
       ],
       "nextSteps": [
         {
-          "description": "Are you a paladin? If so, go to PALADINTREE",
+          "description": "Continue if a paladin.",
           "target": "PALADINTREE"
         },
         {
-          "description": "Climb the red tree? Go to entry CLIMBREDTREE",
+          "description": "Climb the red tree.",
           "target": "CLIMBREDTREE"
         },
         {
-          "description": "To take some leaves from the tree, go to LEAVES",
+          "description": "Take some leaves from the tree.",
           "target": "LEAVES"
         },
         {
-          "description": "Take a brance from the tree? Go to entry TAKEBRANCH",
+          "description": "Take a brance from the tree.",
           "target": "TAKEBRANCH"
         },
         {
-          "description": "Head back to the path? Go to entry REJOINPATH",
+          "description": "Head back to the path.",
           "target": "REJOINPATH"
         },
         {
-          "description": "Do you know the spell Detect Magic? You could try casting it on the tree. Go to entry MAGICTREE",
+          "description": "Cast Detect Magic on the tree.",
           "target": "MAGICTREE"
         }
       ]
@@ -3716,7 +3738,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -3728,7 +3750,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry KEEPGOING.",
+          "description": "Continue...",
           "target": "KEEPGOING"
         }
       ]
@@ -3736,15 +3758,16 @@
     "RESIST": {
       "text": [
         "Add 1 inspiration point for your bravery.",
-        "At your final words of defiance, the Blood Knight of Kiaransalee thrusts his blade forward."
+        "At your final words of defiance, the Blood Knight of Kiaransalee thrusts his blade forward.",
+        "Roll a d20+8. Is it by some miracle lower than your AC?"
       ],
       "nextSteps": [
         {
-          "description": "Roll a d20+8. If by some miracle this is lower than your AC, go to RUN.",
+          "description": "Run.",
           "target": "RUN"
         },
         {
-          "description": "Otherwise go to OHWELL",
+          "description": "Done.",
           "target": "OHWELL"
         }
       ]
@@ -3755,11 +3778,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Are you a barbarian? If so go to BEARINGS",
+          "description": "Continue if a barbarian.",
           "target": "BEARINGS"
         },
         {
-          "description": "If not, proceed to entry SOFTLY to move through the rows of gravestones towards the tomb.",
+          "description": "Move through the rows of gravestones towards the tomb.",
           "target": "SOFTLY"
         }
       ]
@@ -3771,11 +3794,11 @@
       ],
       "nextSteps": [
         {
-          "description": "There is nowhere to hide! To keep digging your steps in a hurry, go to CLAPPERS",
+          "description": "There is nowhere to hide! Keep digging your steps in a hurry.",
           "target": "CLAPPERS"
         },
         {
-          "description": "If you have a ranged attack, you can ready it by going to entry COMEATME",
+          "description": "Ready a ranged attack.",
           "target": "COMEATME"
         }
       ]
@@ -3788,7 +3811,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -3809,7 +3832,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -3820,7 +3843,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry ZOMBIEBATTLE",
+          "description": "Continue...",
           "target": "ZOMBIEBATTLE"
         }
       ]
@@ -3831,15 +3854,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you score 0-33, go to entry SPATTER",
+          "description": "Scored 0-33.",
           "target": "SPATTER"
         },
         {
-          "description": "if you score 34-66, go to entry MIKADUS",
+          "description": "Scored 34-66.",
           "target": "MIKADUS"
         },
         {
-          "description": "If you score 67-100 go to entry PINDROP",
+          "description": "Scored 67-100.",
           "target": "PINDROP"
         }
       ]
@@ -3851,7 +3874,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Wasting no time, you kick out your heels and break into a sprint! Go to entry SCARPER",
+          "description": "Wasting no time, kick out heels and break into a sprint!",
           "target": "SCARPER"
         }
       ]
@@ -3865,7 +3888,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -3876,11 +3899,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to NOROOMTRAPS",
+          "description": "Successful.",
           "target": "NOROOMTRAPS"
         },
         {
-          "description": "If unsuccessful, go to PERCEPTIONLESS",
+          "description": "Unsuccessful.",
           "target": "PERCEPTIONLESS"
         }
       ]
@@ -3892,11 +3915,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to entry CLIMBOUT",
+          "description": "Succeeded.",
           "target": "CLIMBOUT"
         },
         {
-          "description": "If you fail, go to entry WELLWHATNOW",
+          "description": "Failed.",
           "target": "WELLWHATNOW"
         }
       ]
@@ -3910,7 +3933,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry GOBLINBATTLE, and give the goblins one free attack each, with advantage! After that, you may use your movement to free yourself from the net and attack. Conduct combat as normal from that point.",
+          "description": "Give the goblins one free attack each, with advantage! After that, use movement to get free from the net and attack. Combat is conducted as normal from that point.",
           "target": "GOBLINBATTLE"
         }
       ]
@@ -3921,23 +3944,23 @@
       ],
       "nextSteps": [
         {
-          "description": "If you score 1-20 go to entry WANDERERS",
+          "description": "Scored 1-20.",
           "target": "WANDERERS"
         },
         {
-          "description": "If you score 21-40 go to entry RIP",
+          "description": "Scored 21-40.",
           "target": "RIP"
         },
         {
-          "description": "If you score 41-60 go to entry HANKY",
+          "description": "Scored 41-60.",
           "target": "HANKY"
         },
         {
-          "description": "If you score 61-80 go to entry SHRUB",
+          "description": "Scored 61-80.",
           "target": "SHRUB"
         },
         {
-          "description": "If you score 81-100 go to entry GARB",
+          "description": "Scored 81-100.",
           "target": "GARB"
         }
       ]
@@ -3949,11 +3972,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Did you manage to throw Darek a blade? If so, go to entry BLADEBOY",
+          "description": "Darek has a blade.",
           "target": "BLADEBOY"
         },
         {
-          "description": "If not, he is still bound. Go to YOURATTACK",
+          "description": "Darek is still bound.",
           "target": "YOURATTACK"
         }
       ]
@@ -3965,7 +3988,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -3976,7 +3999,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -3989,11 +4012,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Move to tilepage 6 immediately!",
+          "description": "Move south immediately!",
           "target": "TILEPAGE_6"
         },
         {
-          "description": "Move to tilepage 8 immediately!",
+          "description": "Move west immediately!",
           "target": "TILEPAGE_8"
         }
       ]
@@ -4008,7 +4031,7 @@
       ],
       "nextSteps": [
         {
-          "description": "When you are ready, you may leave this cave by going to entry LEAVECAVERN",
+          "description": "When ready, leave this cave.",
           "target": "LEAVECAVERN"
         }
       ]
@@ -4022,11 +4045,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To attempt to open the chest, go to OPENCHEST",
+          "description": "Attempt to open the chest.",
           "target": "OPENCHEST"
         },
         {
-          "description": "To leave and head back to the surface, go to entry LEAVECAVE",
+          "description": "Leave and head back to the surface.",
           "target": "LEAVECAVE"
         }
       ]
@@ -4037,7 +4060,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -4045,30 +4068,32 @@
     "SHIFTWEB": {
       "text": [
         "You conjure the spectral hand and direct it to start clearing the webs away. However, this task proves beyond the magical appendage;",
-        "these webs are well made, and are not moving easily."
+        "these webs are well made, and are not moving easily.",
+        "Have you made a successful stealth check?"
       ],
       "nextSteps": [
         {
-          "description": "Have you made a successful stealth check? If so, go to entry MCSTEALTH.",
+          "description": "Yes.",
           "target": "MCSTEALTH"
         },
         {
-          "description": "If you did not, go to entry OHNO.",
+          "description": "No.",
           "target": "OHNO"
         }
       ]
     },
     "SHOOTAFTER": {
       "text": [
-        "Your target is about 100ft away. You lift your weapon, taking a quick assessment of the conditions, and fire."
+        "Your target is about 100ft away. You lift your weapon, taking a quick assessment of the conditions, and fire.",
+        "Make a ranged attack at disadvantage (unless you have darkvision), AC 17, at whatever is fleeing from you."
       ],
       "nextSteps": [
         {
-          "description": "Make a ranged attack at disadvantage (unless you have darkvision), AC 17, at whatever is fleeing from you. If your attack hits, go to entry GOODSHOT.",
+          "description": "The attack hits.",
           "target": "GOODSHOT"
         },
         {
-          "description": "If you miss, go to MISS",
+          "description": "The attack misses.",
           "target": "MISS"
         }
       ]
@@ -4083,7 +4108,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -4096,7 +4121,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -4109,11 +4134,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If so, go to entry GOBLINGIFT.",
+          "description": "Give the goblin leader a gift.",
           "target": "GOBLINGIFT"
         },
         {
-          "description": "If you do not, or you don’t wish to give a gift, go to SHTUM",
+          "description": "Do not give a gift.",
           "target": "SHTUM"
         }
       ]
@@ -4129,11 +4154,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are victorious, go to entry PILEOBONES",
+          "description": "Victorious.",
           "target": "PILEOBONES"
         },
         {
-          "description": "If you are defeated, go to OHWELL",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -4145,11 +4170,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to NINELIVES",
+          "description": "Succeeded.",
           "target": "NINELIVES"
         },
         {
-          "description": "If you fail, go to OHWELL",
+          "description": "Failed.",
           "target": "OHWELL"
         }
       ]
@@ -4162,7 +4187,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -4173,22 +4198,23 @@
       ],
       "nextSteps": [
         {
-          "description": "Roll a 1d6+1 and take that much damage, then go to entry ZOMBIEBATTLE.",
+          "description": "Roll a 1d6+1 and take that much damage.",
           "target": "ZOMBIEBATTLE"
         }
       ]
     },
     "SLASHWEB": {
       "text": [
-        "You produce your weapon and start hacking away at the webs, but they are not giving way easily! This is going to take some time."
+        "You produce your weapon and start hacking away at the webs, but they are not giving way easily! This is going to take some time.",
+        "*Did you suceed in an earlier stealth check?*"
       ],
       "nextSteps": [
         {
-          "description": "Did you suceed in an earlier stealth check? If so, go to entry HEREWEGO.",
+          "description": "Yes.",
           "target": "HEREWEGO"
         },
         {
-          "description": "If you did not make a stealth check, or if you failed one, go to entry OHNO.",
+          "description": "No.",
           "target": "OHNO"
         }
       ]
@@ -4201,7 +4227,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to the tilepage 8 entry and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -4215,7 +4241,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry BLADEPOINT",
+          "description": "Continue...",
           "target": "BLADEPOINT"
         }
       ]
@@ -4228,7 +4254,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 8 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_8"
         }
       ]
@@ -4241,11 +4267,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If your attack hits, go to entry RANGEDSURPRISE",
+          "description": "The attack hits.",
           "target": "RANGEDSURPRISE"
         },
         {
-          "description": "If it misses, go to SWINGANDAMISS",
+          "description": "The attack misses.",
           "target": "SWINGANDAMISS"
         }
       ]
@@ -4253,11 +4279,12 @@
     "SNEAKY": {
       "text": [
         "You wait till the kobolds pass and then emerge from hiding, sneaking up behind them. They have not noticed your presence!",
-        "Which Kobold are you aiming for, one of the warriors, or the mage?"
+        "Which Kobold are you aiming for, one of the warriors, or the mage?",
+        "Make an attack roll, aiming for a an AC of 12! Then roll damage, deducting any hp from this surprise attack (if damage is over 5, you will have killed one of them outright)."
       ],
       "nextSteps": [
         {
-          "description": "Make an attack roll, aiming for a an AC of 12! Then roll damage (if damage is over 5, you will have killed one of them outright), and continue to entry KOBOLDBATTLE, deducting any hp from this surprise attack",
+          "description": "Continue...",
           "target": "KOBOLDBATTLE"
         }
       ]
@@ -4268,11 +4295,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful go to entry QUIETSTEPS",
+          "description": "Successful.",
           "target": "QUIETSTEPS"
         },
         {
-          "description": "If you are unsuccessful, go to WAKETHEDEAD",
+          "description": "Unsuccessful.",
           "target": "WAKETHEDEAD"
         }
       ]
@@ -4284,11 +4311,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To lower yourself down into this black chasm, go to entry FOOTHOLDS",
+          "description": "Lower yourself down into this black chasm.",
           "target": "FOOTHOLDS"
         },
         {
-          "description": "To ignore this and continue north, go to EXTRACAUTIOUS",
+          "description": "Ignore this and continue north.",
           "target": "EXTRACAUTIOUS"
         }
       ]
@@ -4303,11 +4330,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to TRACKER",
+          "description": "Successful.",
           "target": "TRACKER"
         },
         {
-          "description": "If you are unsuccessful, go to DISCERN",
+          "description": "Unsuccessful.",
           "target": "DISCERN"
         }
       ]
@@ -4318,7 +4345,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CAPTIVE",
+          "description": "Continue...",
           "target": "CAPTIVE"
         }
       ]
@@ -4335,11 +4362,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are victorious, go to entry DEADSPIDERS.",
+          "description": "Victorious.",
           "target": "DEADSPIDERS"
         },
         {
-          "description": "If you lose, go to entry OHWELL.",
+          "description": "Defeated.",
           "target": "OHWELL"
         }
       ]
@@ -4351,11 +4378,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry GIFTOFGAB",
+          "description": "Successful.",
           "target": "GIFTOFGAB"
         },
         {
-          "description": "If you are unsuccessful, go to BADLIAR",
+          "description": "Unsuccessful.",
           "target": "BADLIAR"
         }
       ]
@@ -4378,7 +4405,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry DEATHLYPACT",
+          "description": "Continue...",
           "target": "DEATHLYPACT"
         }
       ]
@@ -4389,15 +4416,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To climb the tree, go to CLIMBREDTREE",
+          "description": "Climb the tree.",
           "target": "CLIMBREDTREE"
         },
         {
-          "description": "To return to the path, go to REJOINPATH",
+          "description": "Return to the path.",
           "target": "REJOINPATH"
         },
         {
-          "description": "To cast Detect Magic on the tree, go to MAGICTREE",
+          "description": "Cast Detect Magic on the tree.",
           "target": "MAGICTREE"
         }
       ]
@@ -4415,15 +4442,15 @@
       ],
       "nextSteps": [
         {
-          "description": "You could try to change the subject. “Those are lovely breeches you are wearing!” Go to entry COMPLIMENT",
+          "description": "Try to change the subject. “Those are lovely breeches you are wearing!”",
           "target": "COMPLIMENT"
         },
         {
-          "description": "You could turn your back and run for it. Go to entry SCARPER",
+          "description": "Turn your back and run for it.",
           "target": "SCARPER"
         },
         {
-          "description": "You could apologize. “I meant nothing by it, friend. Just curious.” Go to entry APOLOGIZE",
+          "description": "Apologize. “I meant nothing by it, friend. Just curious.”",
           "target": "APOLOGIZE"
         }
       ]
@@ -4439,7 +4466,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 4 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_4"
         }
       ]
@@ -4450,19 +4477,19 @@
       ],
       "nextSteps": [
         {
-          "description": "You could make an history check here, if you wish. DC 10. If you are successful, go to entry STUDYDESIGN. Otherwise choose another option from this list",
+          "description": "Make an history check here, DC 10. Continue if successful.",
           "target": "STUDYDESIGN"
         },
         {
-          "description": "Check for traps? Go to entry DOORCHECK",
+          "description": "Check for traps.",
           "target": "DOORCHECK"
         },
         {
-          "description": "Or, you could try pulling on the door. Go to entry OPENSTONEDOOR",
+          "description": "Try pulling on the door.",
           "target": "OPENSTONEDOOR"
         },
         {
-          "description": "You could leave and continue north. Return to tilepage 3 and continue from the last direction you read",
+          "description": "Leave and continue north.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -4477,11 +4504,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you tell Greybark of your mission? If you decide to, go to entry GREYBARKCONVO",
+          "description": "Tell Greybark of your mission.",
           "target": "GREYBARKCONVO"
         },
         {
-          "description": "If not, go to DENYEVERYTHING",
+          "description": "Do not tell Greybark of your mission.",
           "target": "DENYEVERYTHING"
         }
       ]
@@ -4495,22 +4522,23 @@
       ],
       "nextSteps": [
         {
-          "description": "To go inside the cave, go to entry ENTERCAVE",
+          "description": "Go inside the cave.",
           "target": "ENTERCAVE"
         }
       ]
     },
     "STRICKENSKELETON": {
       "text": [
-        "Seeing the holy symbol in your hand, the skeleton’s very life force – if it can be called that! – seems to drain out of it, and it cries out, as if mortally wounded. To your delight, it turns, dropping its shield and sword, and flees away from you down the path, limping as fast as it can go."
+        "Seeing the holy symbol in your hand, the skeleton’s very life force – if it can be called that! – seems to drain out of it, and it cries out, as if mortally wounded. To your delight, it turns, dropping its shield and sword, and flees away from you down the path, limping as fast as it can go.",
+        "Do you want to make a ranged attack against the fleeing skeleton? If so, make an attack roll againt an AC of 13. otherwise,  the skeleton flees out of range, disappearing into the trees."
       ],
       "nextSteps": [
         {
-          "description": "Do you want to make a ranged attack against the fleeing skeleton? If so, roll a d20. If the result is 13 or higher, go to entry KNOCKPINS. If it is lower, the skeleton flees out of range, disappearing into the trees.",
+          "description": "The ranged attack roll hits.",
           "target": "KNOCKPINS"
         },
         {
-          "description": "In any case, after you have finished attacking (or not attacking), Return to tilepage 6 and continue from the last direction you read",
+          "description": "It misses or no attack is made. Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -4523,7 +4551,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 6 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_6"
         }
       ]
@@ -4534,15 +4562,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you want to check for traps? Go to entry DOORCHECK",
+          "description": "Check for traps.",
           "target": "DOORCHECK"
         },
         {
-          "description": "Or, you could try pushing on the door. Go to entry OPENSTONEDOOR",
+          "description": "Try pushing on the door.",
           "target": "OPENSTONEDOOR"
         },
         {
-          "description": "You could leave and continue north. Return to tilepage 3 and continue from the last direction you read",
+          "description": "Leave and continue north.",
           "target": "TILEPAGE_3"
         }
       ]
@@ -4557,7 +4585,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPIDERBATTLE",
+          "description": "Continue...",
           "target": "SPIDERBATTLE"
         }
       ]
@@ -4569,7 +4597,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry BLADEPOINT",
+          "description": "Continue...",
           "target": "BLADEPOINT"
         }
       ]
@@ -4580,11 +4608,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To swim to the far shore go to PADDLEHARD",
+          "description": "Swim to the far shore.",
           "target": "PADDLEHARD"
         },
         {
-          "description": "To swim back the way you came, go to ENOUGHOFTHIS!",
+          "description": "Swim back the way you came.",
           "target": "ENOUGHOFTHIS"
         }
       ]
@@ -4599,7 +4627,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CRITICAL",
+          "description": "Continue...",
           "target": "CRITICAL"
         }
       ]
@@ -4611,11 +4639,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are killed, go to entry OHWELL.",
+          "description": "Defeated.",
           "target": "OHWELL"
         },
         {
-          "description": "If you are not killed, you pick yourself up, tend to your wounds and then carefully proceed along the passage towards the circular room which you can now see ahead. Go to entry CIRCULARROOM",
+          "description": "Pick up, tend to wounds and then carefully proceed along the passage towards the circular room which can now be seen ahead.",
           "target": "CIRCULARROOM"
         }
       ]
@@ -4627,15 +4655,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To place it in your backpack, go to STASHBRANCH",
+          "description": "Place it in your backpack.",
           "target": "STASHBRANCH"
         },
         {
-          "description": "To use it as a walking stick, go to WALKINGSTICK",
+          "description": "Use it as a walking stick.",
           "target": "WALKINGSTICK"
         },
         {
-          "description": "To whittle it to a point, go to WHITTLEBRANCH",
+          "description": "Whittle it to a point.",
           "target": "WHITTLEBRANCH"
         }
       ]
@@ -4646,7 +4674,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry HEREWEGO",
+          "description": "Continue...",
           "target": "HEREWEGO"
         }
       ]
@@ -4655,19 +4683,42 @@
       "text": [
         "Deduct a spell slot.",
         "Moving your hands and speaking the incantation, you feel force gather around you and then explode outwards, blasting the webs and sending a ripple through the trees.",
-        "Roll a d20+1."
+        "Roll a d20+1 againt your spell save DC."
       ],
       "nextSteps": [
         {
-          "description": "If the result is higher than your spell save DC, go to entry LUCKYCRITTERS. If it is lower, read on below.",
+          "description": "The result is equal or higher.",
           "target": "LUCKYCRITTERS"
         },
         {
-          "description": "As soon as your spell detonates, your hear a screeching sound. Something was waiting, just off the path, and was caught in the blast! Roll 2d8. If the result is higher than 11, go to entry OVERKILL. If not, read on below.",
+          "description": "The result is lower.",
+          "target": "THUNDERWEB2"
+        }
+      ]
+    },
+    "THUNDERWEB2": {
+      "text": [
+        "As soon as your spell detonates, your hear a screeching sound. Something was waiting, just off the path, and was caught in the blast! Roll 2d8."
+      ],
+      "nextSteps": [
+        {
+          "description": "The result is 11 or higher.",
           "target": "OVERKILL"
         },
         {
-          "description": "From the undergrowth, the wounded creatures appear: Two GIANT WOLF SPIDERS! They are angry at your intrusion, and hungry for your blood! Go to entry SPIDERBATTLE, deducting your 2d8 roll from both spiders’ hp before you commence combat.",
+          "description": "The result is 10 or lower.",
+          "target": "THUNDERWEB3"
+        }
+      ]
+    },
+    "THUNDERWEB3": {
+      "text": [
+        "From the undergrowth, the wounded creatures appear: Two GIANT WOLF SPIDERS! They are angry at your intrusion, and hungry for your blood!",
+        "Deduct your 2d8 roll from both spiders’ hp before you commence combat."
+      ],
+      "nextSteps": [
+        {
+          "description": "Continue...",
           "target": "SPIDERBATTLE"
         }
       ]
@@ -4678,11 +4729,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you want to search the area around the altar? Go to entry INSPECTALTAR",
+          "description": "Search the area around the altar.",
           "target": "INSPECTALTAR"
         },
         {
-          "description": "Or, you could leave the chamber. Go to entry LEAVECHAMBER",
+          "description": "Leave the chamber.",
           "target": "LEAVECHAMBER"
         }
       ]
@@ -4695,7 +4746,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry KOBOLDBATTLE",
+          "description": "Continue...",
           "target": "KOBOLDBATTLE"
         }
       ]
@@ -4708,15 +4759,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you have any ranged weapon or spell attacks (Thunderwave, Sacred Flame etc) that you could conduct combat with, from within the pit? If so go to entry PITCOMBAT",
+          "description": "Use any ranged weapon or spell attacks (Thunderwave, Sacred Flame etc) that combat could be conducted with from within the pit.",
           "target": "PITCOMBAT"
         },
         {
-          "description": "Do you know the spells Command or Charm Person? If so go to entry WHATACHARMER",
+          "description": "Cast the spells Command or Charm Person.",
           "target": "WHATACHARMER"
         },
         {
-          "description": "If you have neither of these options, the only thing you can really do is wait to see what fate befalls you! Go to entry CAPTIVE",
+          "description": "The only thing that can really be done is wait to see what fate is befell!",
           "target": "CAPTIVE"
         }
       ]
@@ -4730,11 +4781,13 @@
         "| |\n|-|\n| ****DEATH KNIGHT**** |\n| *Medium Undead, Neutral Evil* |",
         "| |\n|-|\n| **Armour Class** 15 |\n| **Hit Points** 28 |\n| **Speed** 30 ft. |",
         "| STR | DEX | CON | INT | WIS | CHA |\n|:-:|:-:|:-:|:-:|:-:|:-:|\n| 15 (+2) | 11 (+0) | 13 (+1) | 12 (+1) | 10 (+0) | 5 (-3) |",
-        "| |\n|-|\n| **Saving Throws** Strength +2 |\n| **Damage Immunities** Poison |\n| **Condition Immunities** Poisoned, charmed, unconscious, frightened |\n| **Senses** Darkvision 60ft, Passive Perception 8 |\n| **Languages** Common |\n| **CR** 1 (200XP) |\n| **Turn Immunity** The Death Knight cannot be turned by any Turn Undead feat or spell. |"
+        "| |\n|-|\n| **Saving Throws** Strength +2 |\n| **Damage Immunities** Poison |\n| **Condition Immunities** Poisoned, charmed, unconscious, frightened |\n| **Senses** Darkvision 60ft, Passive Perception 8 |\n| **Languages** Common |\n| **CR** 1 (200XP) |\n| **Turn Immunity** The Death Knight cannot be turned by any Turn Undead feat or spell. |",
+        "",
+        "Roll your next attack, referring to the stat block above. Take the -1 penalty to your attack roll if you are under the influence of the Fear Aura. Make sure you are keeping track of hitpoints (on both sides!)"
       ],
       "nextSteps": [
         {
-          "description": "Roll your next attack, referring to the stat block below. Take the -1 penalty to your attack roll if you are under the influence of the Fear Aura. Make sure you are keeping track of hitpoints (on both sides!) Then go to entry ROUNDTWO",
+          "description": "Continue...",
           "target": "ROUNDTWO"
         }
       ]
@@ -4750,19 +4803,19 @@
       ],
       "nextSteps": [
         {
-          "description": "Are you a rogue? If so, go to entry READCANT",
+          "description": "Continue if a rogue.",
           "target": "READCANT"
         },
         {
-          "description": "You could try opening the chest? Go to entry OPENCHEST",
+          "description": "Try opening the chest.",
           "target": "OPENCHEST"
         },
         {
-          "description": "You could continue going through the books and scrolls seeing if you can find anything useful related to your quest Go entry SEARCHCLUES",
+          "description": "Continue going through the books and scrolls seeing if anything useful can be found related to the quest.",
           "target": "SEARCHCLUES"
         },
         {
-          "description": "Or you could quickly leave and return to the surface. Go to LEAVECAVE",
+          "description": "Quickly leave and return to the surface.",
           "target": "LEAVECAVE"
         }
       ]
@@ -4781,7 +4834,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 7 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_7"
         }
       ]
@@ -4792,7 +4845,7 @@
       ],
       "nextSteps": [
         {
-          "description": "You continue down the tunnel. Go to entry MOVEWITHIN",
+          "description": "Continue down the tunnel.",
           "target": "MOVEWITHIN"
         }
       ]
@@ -4803,11 +4856,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To check for traps in the surrounding forest go to entry WOODCHECK",
+          "description": "Check for traps in the surrounding forest.",
           "target": "WOODCHECK"
         },
         {
-          "description": "To approach and check for traps on the double stone doors, go to entry DOORCHECK",
+          "description": "Approach and check for traps on the double stone doors.",
           "target": "DOORCHECK"
         }
       ]
@@ -4818,7 +4871,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to Tilepage 1, continuing from the last entry you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_1"
         }
       ]
@@ -4829,7 +4882,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 2 and continue from the last direction you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_2"
         }
       ]
@@ -4840,11 +4893,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry HIDDENDANGER",
+          "description": "Successful.",
           "target": "HIDDENDANGER"
         },
         {
-          "description": "If you are unsuccessful, go to LOOKSFINE",
+          "description": "Unsuccessful.",
           "target": "LOOKSFINE"
         }
       ]
@@ -4856,7 +4909,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 3 and continue on from the last entry you read.",
+          "description": "Continue...",
           "target": "TILEPAGE_3"
         }
       ]
@@ -4867,7 +4920,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -4881,15 +4934,15 @@
       ],
       "nextSteps": [
         {
-          "description": "To cast Detect Magic on the tree, go to MAGICTREE",
+          "description": "Cast Detect Magic on the tree.",
           "target": "MAGICTREE"
         },
         {
-          "description": "To take a branch from the tree, go to TAKEBRANCH",
+          "description": "Take a branch from the tree.",
           "target": "TAKEBRANCH"
         },
         {
-          "description": "To go back to the path, go to REJOINPATH",
+          "description": "Go back to the path.",
           "target": "REJOINPATH"
         }
       ]
@@ -4897,15 +4950,15 @@
     "TRIGGERED": {
       "text": [
         "You hear a click, and then a “ffffft!” sound.",
-        "Two darts come flying towards you from cleverly concealed holes."
+        "Two darts come flying towards you from cleverly concealed holes. Roll a d20+8 against your AC."
       ],
       "nextSteps": [
         {
-          "description": "Roll a d20+8. If the result is higher than your AC, go to DARTHIT.",
+          "description": "The attack hits.",
           "target": "DARTHIT"
         },
         {
-          "description": "If lower, go to DARTMISS",
+          "description": "The attack misses.",
           "target": "DARTMISS"
         }
       ]
@@ -4916,11 +4969,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If successful, go to entry TRAPCAVE",
+          "description": "Successful.",
           "target": "TRAPCAVE"
         },
         {
-          "description": "If unsuccessful, go BEYONDRIVER",
+          "description": "Unsuccessful.",
           "target": "BEYONDRIVER"
         }
       ]
@@ -4932,7 +4985,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to Sub-map 5 and follow the directions there",
+          "description": "Continue...",
           "target": "SUBMAP_5"
         }
       ]
@@ -4944,11 +4997,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If the result is 8 or below go to NOTTURNED",
+          "description": "The result is 8 or below.",
           "target": "NOTTURNED"
         },
         {
-          "description": "If the result is 9 or above, go to entry STRICKENSKELETON",
+          "description": "The result is 9 or above.",
           "target": "STRICKENSKELETON"
         }
       ]
@@ -4960,7 +5013,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPOILSOFADVENTURE",
+          "description": "Continue...",
           "target": "SPOILSOFADVENTURE"
         }
       ]
@@ -4973,7 +5026,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry GOBLINBATTLE",
+          "description": "Continue...",
           "target": "GOBLINBATTLE"
         }
       ]
@@ -4988,7 +5041,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry SPOILSOFADVENTURE",
+          "description": "Continue...",
           "target": "SPOILSOFADVENTURE"
         }
       ]
@@ -5002,7 +5055,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry FANATICSBATTLE",
+          "description": "Continue...",
           "target": "FANATICSBATTLE"
         }
       ]
@@ -5013,7 +5066,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Roll a d20 and turn to RIDERHIT",
+          "description": "Make a ranged attack roll.",
           "target": "RIDERHIT"
         }
       ]
@@ -5024,7 +5077,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry VAPOUR",
+          "description": "Continue...",
           "target": "VAPOUR"
         }
       ]
@@ -5035,11 +5088,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you have a word that you were given, spoken to you by a fairy? If so, go to the entry of that name now!",
+          "description": "Speak out the word given by a fairy.",
           "target": "PEPPERWOOD"
         },
         {
-          "description": "If not, go to entry WORTHYOPPONENT",
+          "description": "No word was given.",
           "target": "WORTHYOPPONENT"
         }
       ]
@@ -5051,11 +5104,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to HOLDBREATH",
+          "description": "Successful.",
           "target": "HOLDBREATH"
         },
         {
-          "description": "If you are unsuccessful go to GASSED",
+          "description": "Unsuccessful.",
           "target": "GASSED"
         }
       ]
@@ -5067,11 +5120,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you possess a Red Tree Stake or branch? If so, go to entry STAKEDRIVE",
+          "description": "Use a Red Tree Stake or branch.",
           "target": "STAKEDRIVE"
         },
         {
-          "description": "If not, go to entry NOREDSTAKE",
+          "description": "No Red Tree Stake or branch.",
           "target": "NOREDSTAKE"
         }
       ]
@@ -5084,11 +5137,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you score 0-50, go to entry DEADEND",
+          "description": "The result is 0-50.",
           "target": "DEADEND"
         },
         {
-          "description": "If you score 51-100, go to DEATHBED",
+          "description": "The result is 51-100.",
           "target": "DEATHBED"
         }
       ]
@@ -5100,19 +5153,19 @@
       ],
       "nextSteps": [
         {
-          "description": "To climb the tree, go to entry CLIMBREDTREE",
+          "description": "Climb the tree.",
           "target": "CLIMBREDTREE"
         },
         {
-          "description": "To take some leaves, go to LEAVES",
+          "description": "Take some leaves.",
           "target": "LEAVES"
         },
         {
-          "description": "To cast Detect Magic on the tree, go to MAGICTREE",
+          "description": "Cast Detect Magic on the tree.",
           "target": "MAGICTREE"
         },
         {
-          "description": "To return to the forest path, go to entry REJOINPATH",
+          "description": "Return to the forest path.",
           "target": "REJOINPATH"
         }
       ]
@@ -5123,11 +5176,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you hide? If so go to entry YELLOWBELLY",
+          "description": "Hide.",
           "target": "YELLOWBELLY"
         },
         {
-          "description": "Or do you stand and face them, whoever they are? Go to entry BRINGIT",
+          "description": "Stand and face them, whoever they are.",
           "target": "BRINGIT"
         }
       ]
@@ -5139,7 +5192,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry CRITICAL",
+          "description": "Continue...",
           "target": "CRITICAL"
         }
       ]
@@ -5150,7 +5203,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to CABINENTRY",
+          "description": "Continue...",
           "target": "CABINENTRY"
         }
       ]
@@ -5162,11 +5215,11 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you wait until they are completely gone, and then leave your cover? Go to BETTERSAFE",
+          "description": "Wait until they are completely gone, and then leave cover.",
           "target": "BETTERSAFE"
         },
         {
-          "description": "Or, do you try to sneak up behind them and make a surprise attack? Go to SNEAKY",
+          "description": "Try to sneak up behind them and make a surprise attack.",
           "target": "SNEAKY"
         }
       ]
@@ -5178,15 +5231,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Do you know the Jump spell? If so, go to JUMPESCAPE",
+          "description": "Cast the Jump spell.",
           "target": "JUMPESCAPE"
         },
         {
-          "description": "Do you have any sort of flying feat? If so, go to FLYESCAPE",
+          "description": "Use some sort of flying.",
           "target": "FLYESCAPE"
         },
         {
-          "description": "Or, you can try and dig steps up the side of the pit. Go to DIGESCAPE",
+          "description": "Try and dig steps up the side of the pit.",
           "target": "DIGESCAPE"
         }
       ]
@@ -5199,7 +5252,7 @@
         "The cultist casts down her crossbow. “What a fabulous idea,” she exclaims, and hurls herself headfirst into the pit trap.",
         "Still seething with rage at her early mockery of you, you catch her while she’s down and mercilessly finish her off. You search her body and find a hand crossbow, 18 bolts and a scimitar. She also has a amulet depicting a red gauntlet, and a map of the town of Orlbar. Some of the houses are marked, “Here”.",
         "Add 25 XP.",
-        "Then, quickly before any more of her kind turn up, you finish digging your way out of the pit and continue your quest. (continued across…)"
+        "Then, quickly before any more of her kind turn up, you finish digging your way out of the pit and continue your quest."
       ],
       "nextSteps": [
         {
@@ -5216,11 +5269,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you fail, go to entry GREYBEAM",
+          "description": "Failed.",
           "target": "GREYBEAM"
         },
         {
-          "description": "If you succeed, go to entry LUCKYDODGE",
+          "description": "Successful.",
           "target": "LUCKYDODGE"
         }
       ]
@@ -5231,11 +5284,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If so, go to entry CHANCEROLL",
+          "description": "Yes.",
           "target": "CHANCEROLL"
         },
         {
-          "description": "If not, go to entry HOLDTHATTHOUGHT",
+          "description": "No.",
           "target": "HOLDTHATTHOUGHT"
         }
       ]
@@ -5259,7 +5312,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 9 and continue from the last entry you read WHATSTHIS",
+          "description": "Continue...",
           "target": "WHATSTHIS"
         }
       ]
@@ -5271,11 +5324,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are successful, go to entry STRANGEPRESENCE",
+          "description": "Successful.",
           "target": "STRANGEPRESENCE"
         },
         {
-          "description": "If you are not successful, go to entry ASYOUWERE",
+          "description": "Unsuccessful.",
           "target": "ASYOUWERE"
         }
       ]
@@ -5286,7 +5339,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Return to tilepage 5 and continue from the last direction you read",
+          "description": "Continue...",
           "target": "TILEPAGE_5"
         }
       ]
@@ -5299,7 +5352,7 @@
       ],
       "nextSteps": [
         {
-          "description": "To enter the cave, go to ENTERCAVE",
+          "description": "Enter the cave.",
           "target": "ENTERCAVE"
         }
       ]
@@ -5312,19 +5365,19 @@
       ],
       "nextSteps": [
         {
-          "description": "To climb the tree, go to entry CLIMBREDTREE",
+          "description": "Climb the tree.",
           "target": "CLIMBREDTREE"
         },
         {
-          "description": "To take some leaves, go to LEAVES",
+          "description": "Take some leaves.",
           "target": "LEAVES"
         },
         {
-          "description": "To cast Detect Magic on the tree, go to MAGICTREE",
+          "description": "Cast Detect Magic on the tree.",
           "target": "MAGICTREE"
         },
         {
-          "description": "To return to the forest path, go to entry REJOINPATH",
+          "description": "Return to the forest path.",
           "target": "REJOINPATH"
         }
       ]
@@ -5340,15 +5393,15 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to NICECAMP",
+          "description": "Successful.",
           "target": "NICECAMP"
         },
         {
-          "description": "If you fail, go to NIGHTCRITTERS",
+          "description": "Unsuccessful.",
           "target": "NIGHTCRITTERS"
         },
         {
-          "description": "If you would rather continue without rest, return to tilepage 4 and continue from the last direction you read",
+          "description": "Continue without rest.",
           "target": "TILEPAGE_4"
         }
       ]
@@ -5361,11 +5414,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To draw your weapon and do battle, go to entry GOBLINBATTLE",
+          "description": "Draw your weapon and do battle.",
           "target": "GOBLINBATTLE"
         },
         {
-          "description": "To try and placate these little thugs with your powers of persuasion, go to entry DEFUSE",
+          "description": "Try and placate these little thugs with powers of persuasion.",
           "target": "DEFUSE"
         }
       ]
@@ -5376,11 +5429,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you succeed, go to entry FORESTTRAPS",
+          "description": "Successful.",
           "target": "FORESTTRAPS"
         },
         {
-          "description": "If you fail, go to entry TRAPSNOPE",
+          "description": "Unsuccessful.",
           "target": "TRAPSNOPE"
         }
       ]
@@ -5396,7 +5449,7 @@
       ],
       "nextSteps": [
         {
-          "description": "Go to entry OHWELL",
+          "description": "Continue...",
           "target": "OHWELL"
         }
       ]
@@ -5408,11 +5461,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you fail, go to PLAINSIGHT",
+          "description": "Failed.",
           "target": "PLAINSIGHT"
         },
         {
-          "description": "If you succeed, go to entry WELLHIDDEN",
+          "description": "Successful.",
           "target": "WELLHIDDEN"
         }
       ]
@@ -5428,15 +5481,15 @@
       ],
       "nextSteps": [
         {
-          "description": "Use the Death Knight’s stats below and make another attack! Then go to entry DUKEITOUT",
+          "description": "Use the Death Knight’s stats below and make another attack!",
           "target": "DUKEITOUT"
         },
         {
-          "description": "If you have won, go to VICTORIOUS",
+          "description": "Combat won.",
           "target": "VICTORIOUS"
         },
         {
-          "description": "If you have been defeated, go to entry VALIANTDEAFEAT",
+          "description": "Combat lost.",
           "target": "VALIANTDEAFEAT"
         }
       ]
@@ -5449,11 +5502,11 @@
       ],
       "nextSteps": [
         {
-          "description": "To investigate, go to CULTISTSHUT",
+          "description": "Investigate the hut.",
           "target": "CULTISTSHUT"
         },
         {
-          "description": "To ignore this hut and continue on your way, Return to tilepage 6 and continue from the last direction you read",
+          "description": "Ignore the hut and continue on your way.",
           "target": "TILEPAGE_6"
         }
       ]
@@ -5469,11 +5522,11 @@
       ],
       "nextSteps": [
         {
-          "description": "If you are victorious, go to CREEPERSLAIN",
+          "description": "Victory.",
           "target": "CREEPERSLAIN"
         },
         {
-          "description": "If you are defeated, go to OHWELL",
+          "description": "Defeat.",
           "target": "OHWELL"
         }
       ]
@@ -5488,11 +5541,11 @@
       "imageId": 7,
       "nextSteps": [
         {
-          "description": "To check for traps, go to entry TUNNELTRAPS.",
+          "description": "Check for traps.",
           "target": "TUNNELTRAPS"
         },
         {
-          "description": "If you want to simply continue down the tunnel without checking for traps, go to entry MOVEWITHIN.",
+          "description": "Continue down the tunnel without checking for traps.",
           "target": "MOVEWITHIN"
         }
       ]
@@ -5508,7 +5561,7 @@
       "imageId": 8,
       "nextSteps": [
         {
-          "description": "When you are ready, go to entry DEEPCAVE.",
+          "description": "Continue...",
           "target": "DEEPCAVE"
         }
       ]
@@ -5524,11 +5577,11 @@
       "imageId": 9,
       "nextSteps": [
         {
-          "description": "When you reach the room with the coffins, you may check for traps by going to entry ROOMTRAPS.",
+          "description": "Check for traps.",
           "target": "ROOMTRAPS"
         },
         {
-          "description": "Or, if not checking for traps, you can simply proceed to entry MAUSOLEUM.",
+          "description": "Continue...",
           "target": "MAUSOLEUM"
         }
       ]
@@ -5543,11 +5596,11 @@
       "imageId": 10,
       "nextSteps": [
         {
-          "description": "If you are checking for traps, go to entry BENDTRAPS.",
+          "description": "Check for traps.",
           "target": "BENDTRAPS"
         },
         {
-          "description": "To simply continue around the bend in the passage and onwards to whatever lies ahead, go to entry DOGLEG.",
+          "description": "Continue around the bend in the passage and onwards to whatever lies ahead.",
           "target": "DOGLEG"
         }
       ]
@@ -5556,12 +5609,13 @@
       "text": [
         "As you approach the left bend ahead, the noises become clearer… a low groaning, and underneath that, a growling sound.",
         "Then another sound – the chink of metal, the sound of armoured feet across stone…",
-        "Then a ragged, broken voice, speaking a two-word command: “Kneel, squire!”"
+        "Then a ragged, broken voice, speaking a two-word command: “Kneel, squire!”",
+        "Moving with stealth? Make a stealth check, DC 10, since you have heard noises. If you have the hand-drawn map, make this check with advantage. Take note of success or failure."
       ],
       "imageId": 11,
       "nextSteps": [
         {
-          "description": "Moving with stealth? Make a stealth check, DC 10, since you have heard noises. If you have the hand-drawn map, make this check with advantage. Take note of success or failure and go to entry BENDINGPASSAGE.",
+          "description": "Continue...",
           "target": "BENDINGPASSAGE"
         }
       ]
@@ -5580,27 +5634,27 @@
       "imageId": 12,
       "nextSteps": [
         {
-          "description": "If successful when checking for traps, go to CHECKSUCCESS.",
+          "description": "Successfully checked for traps.",
           "target": "CHECKSUCCESS"
         },
         {
-          "description": "If you fail when checking for traps, go to TRAPFAIL.",
+          "description": "Failed checking for traps.",
           "target": "TRAPFAIL"
         },
         {
-          "description": "When you are ready, move your token through the map in the direction you desire. When you reach a square adjoining the green translucent dot, go to entry QUIETENTRY.",
+          "description": "Continue on the path.",
           "target": "QUIETENTRY"
         },
         {
-          "description": "Move onto tilepage 2.",
+          "description": "Move onto east.",
           "target": "TILEPAGE_2"
         },
         {
-          "description": "Move onto tilepage 3.",
+          "description": "Move onto west.",
           "target": "TILEPAGE_3"
         },
         {
-          "description": "Move onto tilepage 5.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_5"
         }
       ]
@@ -5632,11 +5686,11 @@
           "target": "TRAPLESS"
         },
         {
-          "description": "Move onto tilepage 1.",
+          "description": "Move onto west.",
           "target": "TILEPAGE_1"
         },
         {
-          "description": "Move onto tilepage 6.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_6"
         }
       ]
@@ -5654,23 +5708,23 @@
       "imageId": 14,
       "nextSteps": [
         {
-          "description": "Checking for traps?: Go to entry TRAPCHECK.",
+          "description": "Check for traps.",
           "target": "TRAPCHECK"
         },
         {
-          "description": "To investigate the low stone building, go to entry STONEDOORS.",
+          "description": "Investigate the low stone building.",
           "target": "STONEDOORS"
         },
         {
-          "description": "If you would rather keep going, then your character continues around the bend and north. When you reach a square adjoining the green marker, go to entry ROUNDTHETWIST.",
+          "description": "Continue around the bend and north.",
           "target": "ROUNDTHETWIST"
         },
         {
-          "description": "Move onto tilepage 1.",
+          "description": "Move onto east.",
           "target": "TILEPAGE_1"
         },
         {
-          "description": "Move onto tilepage 4.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_4"
         }
       ]
@@ -5689,23 +5743,23 @@
       "imageId": 15,
       "nextSteps": [
         {
-          "description": "Checking for traps?: Go to entry DEEPWOODS.",
+          "description": "Check for traps.",
           "target": "DEEPWOODS"
         },
         {
-          "description": "To investigate the mossy log to the left, go to entry MOSSYLOG.",
+          "description": "Investigate the mossy log to the left.",
           "target": "MOSSYLOG"
         },
         {
-          "description": "When you reach a square adjoining the green marker, go to entry WHOKNOWSWHAT.",
+          "description": "Continue on the path.",
           "target": "WHOKNOWSWHAT"
         },
         {
-          "description": "Move onto tilepage 3.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_3"
         },
         {
-          "description": "Move onto tilepage 7.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_7"
         }
       ]
@@ -5725,27 +5779,27 @@
       "imageId": 16,
       "nextSteps": [
         {
-          "description": "Checking for traps?: Go to entry BENDYBIT.",
+          "description": "Check for traps.",
           "target": "BENDYBIT"
         },
         {
-          "description": "To check out the rockpile to the left, go to entry ROCKPILE.",
+          "description": "Check out the rockpile to the left.",
           "target": "ROCKPILE"
         },
         {
-          "description": "To investigate the out-of-place looking red tree, go to entry REDTREE.",
+          "description": "Investigate the out-of-place looking red tree.",
           "target": "REDTREE"
         },
         {
-          "description": "When you reach a tile adjoining the green dot near the top of the map, go to entry NASTYTURN.",
+          "description": "Continue on the path.",
           "target": "NASTYTURN"
         },
         {
-          "description": "Move onto tilepage 1.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_1"
         },
         {
-          "description": "Move onto tilepage 8.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_8"
         }
       ]
@@ -5765,23 +5819,23 @@
       "imageId": 17,
       "nextSteps": [
         {
-          "description": "Checking for traps? Go to entry MORETRAPS.",
+          "description": "Check for traps.",
           "target": "MORETRAPS"
         },
         {
-          "description": "To approach and investigate the house, go to entry LITTLEHUT.",
+          "description": "Investigate the house.",
           "target": "LITTLEHUT"
         },
         {
-          "description": "When you reach a tile adjoining the green dot near the top of the map, go to entry WHATAWAITS?.",
+          "description": "Continue on the path.",
           "target": "WHATAWAITS?"
         },
         {
-          "description": "Move onto tilepage 2.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_2"
         },
         {
-          "description": "Move onto tilepage 9.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_9"
         }
       ]
@@ -5798,23 +5852,23 @@
       "imageId": 18,
       "nextSteps": [
         {
-          "description": "Checking for traps? Go to entry TRAPRIVER.",
+          "description": "Check for traps.",
           "target": "TRAPRIVER"
         },
         {
-          "description": "To approach and investigate the stream, in order to get to the cave, go to entry CAVESTREAM.",
+          "description": "Investigate the stream.",
           "target": "CAVESTREAM"
         },
         {
-          "description": "When you reach a tile adjoining the green dot near the centre of the map, go to entry RIVERDWELLERS.",
+          "description": "Continue on the path.",
           "target": "RIVERDWELLERS"
         },
         {
-          "description": "Move onto tilepage 4.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_4"
         },
         {
-          "description": "Move onto tilepage 8.",
+          "description": "Move onto east.",
           "target": "TILEPAGE_8"
         }
       ]
@@ -5832,31 +5886,31 @@
       "imageId": 19,
       "nextSteps": [
         {
-          "description": "Checking for traps? Go to entry JUNCTIONTRAPS.",
+          "description": "Check for traps.",
           "target": "JUNCTIONTRAPS"
         },
         {
-          "description": "If you would like to investigate the hole in the ground to the south, go to entry SOUTHPATH.",
+          "description": "Investigate the hole in the ground to the south.",
           "target": "SOUTHPATH"
         },
         {
-          "description": "When you reach a tile adjoining the green dot, go to entry LIKELYCAMP.",
+          "description": "Continue on the path.",
           "target": "LIKELYCAMP"
         },
         {
-          "description": "Move onto tilepage 5.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_5"
         },
         {
-          "description": "Move onto tilepage 7.",
+          "description": "Move onto west.",
           "target": "TILEPAGE_7"
         },
         {
-          "description": "Move onto tilepage 9.",
+          "description": "Move onto east.",
           "target": "TILEPAGE_9"
         },
         {
-          "description": "Move onto tilepage 11.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_11"
         }
       ]
@@ -5877,19 +5931,19 @@
       "imageId": 20,
       "nextSteps": [
         {
-          "description": "Talk to the stranger? Go to CONVERSATION.",
+          "description": "Talk to the stranger.",
           "target": "CONVERSATION"
         },
         {
-          "description": "To ignore him and continue on, go to entry WHATASNOB.",
+          "description": "Ignore him and continue on.",
           "target": "WHATASNOB"
         },
         {
-          "description": "Move onto tilepage 6.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_6"
         },
         {
-          "description": "Move onto tilepage 8.",
+          "description": "Move onto west.",
           "target": "TILEPAGE_8"
         }
       ]
@@ -5909,15 +5963,15 @@
       "imageId": 21,
       "nextSteps": [
         {
-          "description": "If successful in checking for traps, go to entry GRAVETRAPS.",
+          "description": "Successful in checking for traps.",
           "target": "GRAVETRAPS"
         },
         {
-          "description": "If unsuccessful in checking for traps, go to RESTINPIECES.",
+          "description": "Unsuccessful in checking for traps.",
           "target": "RESTINPIECES"
         },
         {
-          "description": "Move onto tilepage 11.",
+          "description": "Move onto east.",
           "target": "TILEPAGE_11"
         }
       ]
@@ -5936,11 +5990,11 @@
       "imageId": 22,
       "nextSteps": [
         {
-          "description": "To go west (left), go to tilepage 10 and follow the instructions there.",
+          "description": "Move onto west.",
           "target": "TILEPAGE_10"
         },
         {
-          "description": "To go north, go to tilepage 12.",
+          "description": "Move onto north.",
           "target": "TILEPAGE_12"
         }
       ]
@@ -5955,7 +6009,7 @@
       "imageId": 23,
       "nextSteps": [
         {
-          "description": "To go back, retreat to tilepage 11 and follow the instructions there.",
+          "description": "Move onto south.",
           "target": "TILEPAGE_11"
         }
       ]
