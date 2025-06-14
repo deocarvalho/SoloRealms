@@ -53,15 +53,15 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
     initializeAdventure();
   }, [bookId, userId]);
 
-  const handleChoice = async (target: string, description: string) => {
+  const handleChoice = async (target: string, text: string) => {
     if (!book) return;
     
     const nextEntry = book.entries.entries[target];
     if (nextEntry) {
       setCurrentEntry(nextEntry);
-      // Check if this is the end of the book (no more next steps)
-      const isEnd = nextEntry.nextSteps.length === 0;
-      await progressTracker.updateProgress(bookId, target, description, isEnd);
+      // Check if this is the end of the book (no more choices)
+      const isEnd = nextEntry.choices.length === 0;
+      await progressTracker.updateProgress(bookId, target, text, isEnd);
     }
   };
 
@@ -82,8 +82,8 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
   };
 
   const handleCloseBook = async () => {
-    // If we're at an endpoint (no next steps), clear the progress
-    if (currentEntry && currentEntry.nextSteps.length === 0) {
+    // If we're at an endpoint (no choices), clear the progress
+    if (currentEntry && currentEntry.choices.length === 0) {
       await progressTracker.clearProgress(bookId);
     }
     // Navigate back to the book list
@@ -150,13 +150,13 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
             ))}
 
             <div className="mt-8 space-y-4">
-              {currentEntry.nextSteps.map((step, index) => (
+              {currentEntry.choices.map((choice, index) => (
                 <button
                   key={index}
-                  onClick={() => handleChoice(step.target, step.description)}
+                  onClick={() => handleChoice(choice.target, choice.text)}
                   className="w-full bg-accent text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-left"
                 >
-                  {step.description}
+                  {choice.text}
                 </button>
               ))}
             </div>

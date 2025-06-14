@@ -17,8 +17,8 @@ export interface BookMetadata {
 export interface BookEntry {
   text: string[];
   imageId?: string;
-  nextSteps: {
-    description: string;
+  choices: {
+    text: string;
     target: string;
   }[];
 }

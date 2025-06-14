@@ -43,9 +43,9 @@ export class BookContentLoader implements AdventureLoader {
         StartingPoint: {
           Code: 'START',
           Text: entries.entries['START'].text,
-          NextSteps: entries.entries['START'].nextSteps.map(step => ({
-            Description: step.description,
-            Code: step.target
+          Choices: entries.entries['START'].choices.map(choice => ({
+            Text: choice.text,
+            Code: choice.target
           })),
           ImageCode: entries.entries['START'].imageId ? parseInt(entries.entries['START'].imageId) : undefined
         },
@@ -54,9 +54,9 @@ export class BookContentLoader implements AdventureLoader {
           .map(([code, entry]) => ({
             Code: code,
             Text: entry.text,
-            NextSteps: entry.nextSteps.map(step => ({
-              Description: step.description,
-              Code: step.target
+            Choices: entry.choices.map(choice => ({
+              Text: choice.text,
+              Code: choice.target
             })),
             ImageCode: entry.imageId ? parseInt(entry.imageId) : undefined
           }))

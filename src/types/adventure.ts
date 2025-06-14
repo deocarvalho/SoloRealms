@@ -2,11 +2,11 @@
 export interface BaseEntry {
   Code: string;
   Text: string[];
-  NextSteps: NextStep[];
+  Choices: Choice[];
 }
 
-export interface NextStep {
-  Description: string;
+export interface Choice {
+  Text: string;
   Code: string;
 }
 
