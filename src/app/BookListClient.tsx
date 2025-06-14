@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 import { ProgressTracker } from '@/services/ProgressTracker';
 import Modal from '@/components/Modal';
+import BookCard from '@/components/BookCard';
 
 interface BookListClientProps {
   books: BookMetadata[];
@@ -14,7 +15,7 @@ interface BookListClientProps {
 export default function BookListClient({ books }: BookListClientProps) {
   const [showAdventure, setShowAdventure] = useState(false);
   const [selectedBookId, setSelectedBookId] = useState<number | null>(null);
-  const [ongoingSessions, setOngoingSessions] = useState<{ [bookId: number]: { description: string, currentEntryId: string } }>({});
+  const [ongoingSessions, setOngoingSessions] = useState<{ [bookId: number]: { currentEntryId: string } }>({});
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
   const [userId, setUserId] = useState<string>('');
   const [showConfirmModal, setShowConfirmModal] = useState(false);
@@ -45,22 +46,22 @@ export default function BookListClient({ books }: BookListClientProps) {
       });
   }, []);
 
+  // Add effect to reload sessions when adventure is closed
+  useEffect(() => {
+    if (!showAdventure && userId) {
+      loadOngoingSessions(userId);
+    }
+  }, [showAdventure, userId]);
+
   const loadOngoingSessions = async (userId: string) => {
     const progressTracker = new ProgressTracker(userId);
-    const sessions: { [bookId: number]: { description: string, currentEntryId: string } } = {};
+    const sessions: { [bookId: number]: { currentEntryId: string } } = {};
     
     // Load progress for each book
     for (const book of books) {
       const progress = await progressTracker.getProgress(book.id);
-      if (progress) {
-        let description = '';
-        if (progress.choices && progress.choices.length > 0) {
-          description = progress.choices[progress.choices.length - 1].choice;
-        } else {
-          description = `At entry ${progress.currentEntryId}`;
-        }
+      if (progress && progress.currentEntryId) {
         sessions[book.id] = {
-          description,
           currentEntryId: progress.currentEntryId
         };
       }
@@ -110,70 +111,31 @@ export default function BookListClient({ books }: BookListClientProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {books.map((book) => {
-          const session = ongoingSessions[book.id];
-          const hasOngoingSession = !!session;
-          const coverImage = book.coverImage?.thumb;
-          const shouldShowImage = coverImage && !failedImages.has(coverImage.id);
-          const coverImageUrl = coverImage ? `/books/book-${book.id.toString().padStart(8, '0')}/images/${coverImage.filename}` : '';
-          return (
-            <div key={book.id} className="bg-white/10 rounded-lg shadow-lg overflow-hidden border border-white/20 flex flex-col h-full">
-              <div className="relative h-48 bg-gray-100 p-6 m-2">
-                {shouldShowImage ? (
-                  <Image
-                    src={coverImageUrl}
-                    alt={coverImage.altText || book.title}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    priority
-                    onError={() => handleImageError(coverImage.id)}
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    <span>No cover image</span>
-                  </div>
-                )}
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-2xl font-bold mb-2 text-white drop-shadow">{book.title}</h2>
-                <p className="text-gray-300 mb-4">By {book.authors?.join(', ')}</p>
-                <div className="mt-auto flex space-x-4">
-                  {hasOngoingSession ? (
-                    <div className="flex space-x-4">
-                      <button
-                        onClick={() => {
-                          setSelectedBookId(book.id);
-                          setShowAdventure(true);
-                        }}
-                        className="flex-1 bg-accent text-white px-4 py-2 rounded hover:bg-accent-dark transition-colors font-semibold shadow"
-                      >
-                        Continue
-                      </button>
-                      <button
-                        onClick={() => handleNewGameClick(book.id)}
-                        className="flex-1 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors font-semibold shadow"
-                      >
-                        Restart
-                      </button>
-                    </div>
-                  ) : (
-                    <button
-                      onClick={() => {
-                        setSelectedBookId(book.id);
-                        setShowAdventure(true);
-                      }}
-                      className="w-full bg-accent text-white px-6 py-2 rounded hover:bg-accent-dark transition-colors font-semibold shadow"
-                    >
-                      Start Adventure
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {books.map((book) => (
+            <BookCard
+              key={book.id}
+              book={book}
+              onStart={() => {
+                setSelectedBookId(book.id);
+                setShowAdventure(true);
+              }}
+              onContinue={() => {
+                setSelectedBookId(book.id);
+                setShowAdventure(true);
+              }}
+              onRestart={() => {
+                if (window.confirm('Are you sure you want to restart this adventure? All progress will be lost.')) {
+                  const progressTracker = new ProgressTracker(userId);
+                  progressTracker.clearProgress(book.id);
+                  loadOngoingSessions(userId);
+                }
+              }}
+              hasProgress={!!ongoingSessions[book.id]}
+            />
+          ))}
+        </div>
       </div>
 
       <Modal

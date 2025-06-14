@@ -1,11 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { BookContent, BookEntry } from '@/types/book';
+import { useState, useEffect, useMemo } from 'react';
+import { BookContent, BookEntry, Choice, Requirement } from '@/types/book';
 import { ProgressTracker } from '@/services/ProgressTracker';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Modal from '@/components/Modal';
+import { RequirementEvaluator } from '@/services/RequirementEvaluator';
+import { VisibilityManager } from '@/services/VisibilityManager';
+import { BookContentLoader } from '@/services/BookContentLoader';
 
 interface AdventureReaderProps {
   bookId: number;
@@ -19,72 +22,154 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
   const [error, setError] = useState<string | null>(null);
   const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
   const [showConfirmModal, setShowConfirmModal] = useState(false);
-  
-  const progressTracker = new ProgressTracker(userId);
+  const [hiddenEntries, setHiddenEntries] = useState<Set<string>>(new Set());
+  const [visibleEntries, setVisibleEntries] = useState<Set<string>>(new Set());
+  const [availableChoices, setAvailableChoices] = useState<Choice[]>([]);
+  const [progressTracker] = useState(() => new ProgressTracker(userId));
+  const [requirementEvaluator] = useState(() => new RequirementEvaluator(progressTracker, bookId));
+  const [visibilityManager] = useState(() => new VisibilityManager());
+  const [bookContentLoader] = useState(() => new BookContentLoader());
 
   useEffect(() => {
-    async function initializeAdventure() {
+    async function loadBook() {
+      if (!bookId || !userId) return;
+      
       try {
-        const res = await fetch(`/api/books/${bookId}/content`);
-        if (!res.ok) throw new Error('Failed to load book content');
-        const loadedBook = await res.json();
+        setLoading(true);
+        setError(null);
+        const loadedBook = await bookContentLoader.loadBook(bookId);
         setBook(loadedBook);
-
-        // Load progress
+        
+        // Load progress and initialize visited entries
         const progress = await progressTracker.getProgress(bookId);
-
-        // Set initial entry
-        const entryId = progress?.currentEntryId || 'START';
-        const entry = loadedBook.entries.entries[entryId];
-
-        if (!entry) {
-          throw new Error(`Entry ${entryId} not found`);
+        if (progress) {
+          setCurrentEntry(loadedBook.entries.entries[progress.currentEntryId]);
+          visibilityManager.initializeVisitedEntries(progress.visitedEntries || []);
+          
+          // Update visibility states based on the last chosen target
+          if (progress.choices && progress.choices.length > 0) {
+            const lastChoice = progress.choices[progress.choices.length - 1];
+            const currentEntry = loadedBook.entries.entries[progress.currentEntryId];
+            await Promise.all(currentEntry.choices.map(choice => 
+              visibilityManager.evaluateVisibility(choice, lastChoice.targetId)
+            ));
+          }
+        } else {
+          // Use the first entry as the starting point if no progress exists
+          const firstEntryId = Object.keys(loadedBook.entries.entries)[0];
+          setCurrentEntry(loadedBook.entries.entries[firstEntryId]);
         }
-
-        setCurrentEntry(entry);
-      } catch (err) {
-        console.error('Error initializing adventure:', err);
-        setError('Failed to load the adventure book');
+      } catch (error) {
+        console.error('Error loading book:', error);
+        setError(error instanceof Error ? error.message : 'Failed to load book');
       } finally {
         setLoading(false);
       }
     }
 
-    initializeAdventure();
+    loadBook();
   }, [bookId, userId]);
 
-  const handleChoice = async (target: string, description: string) => {
-    if (!book) return;
-    
+  useEffect(() => {
+    async function updateAvailableChoices() {
+      if (!currentEntry) {
+        setAvailableChoices([]);
+        return;
+      }
+
+      const choices = await Promise.all(
+        currentEntry.choices.map(async (choice) => {
+          // Check requirements
+          if (choice.requirement) {
+            const requirement: Requirement = {
+              type: choice.requirement.type,
+              value: choice.requirement.value || ''
+            };
+            const result = await requirementEvaluator.evaluateRequirement(requirement);
+            if (!result.isMet) {
+              return null;
+            }
+            // Update hidden/visible entries based on requirement result
+            if (result.hiddenEntries) {
+              setHiddenEntries(prev => new Set([...Array.from(prev), ...result.hiddenEntries!]));
+            }
+            if (result.visibleEntries) {
+              setVisibleEntries(prev => new Set([...Array.from(prev), ...result.visibleEntries!]));
+            }
+          }
+
+          // Check visibility
+          const isVisible = await visibilityManager.evaluateVisibility(choice, currentEntry.id);
+          if (!isVisible) {
+            return null;
+          }
+
+          return choice;
+        })
+      );
+
+      setAvailableChoices(choices.filter((choice): choice is Choice => choice !== null));
+    }
+
+    updateAvailableChoices();
+  }, [currentEntry, requirementEvaluator, visibilityManager]);
+
+  const handleChoice = async (target: string, text: string) => {
+    if (!book || !currentEntry) return;
+
     const nextEntry = book.entries.entries[target];
     if (nextEntry) {
+      if (hiddenEntries.has(target) && !visibleEntries.has(target)) {
+        return;
+      }
+
+      // Update visibility states based on the chosen choice
+      const chosenChoice = currentEntry.choices.find(c => c.target === target);
+      if (chosenChoice) {
+        await visibilityManager.evaluateVisibility(chosenChoice, currentEntry.id);
+      }
+
+      // Add the current entry to visited entries
+      visibilityManager.addVisitedEntry(currentEntry.id);
+
       setCurrentEntry(nextEntry);
-      // Check if this is the end of the book (no more next steps)
-      const isEnd = nextEntry.nextSteps.length === 0;
-      await progressTracker.updateProgress(bookId, target, description, isEnd);
+      const isEnd = nextEntry.choices.length === 0;
+      await progressTracker.updateProgress(bookId, currentEntry.id, target, isEnd);
     }
   };
 
   const handleRestart = async () => {
     if (!book) return;
-    
-    const startEntry = book.entries.entries['START'];
+
+    // Use the first entry as the starting point
+    const firstEntryId = Object.keys(book.entries.entries)[0];
+    const startEntry = book.entries.entries[firstEntryId];
     if (startEntry) {
       // First clear the progress
       await progressTracker.clearProgress(bookId);
-      
+
+      // Reset visibility state
+      visibilityManager.resetState();
+      setHiddenEntries(new Set());
+      setVisibleEntries(new Set());
+
       // Then set the current entry
       setCurrentEntry(startEntry);
-      
+
       // Finally create new progress
-      await progressTracker.updateProgress(bookId, 'START', 'Restarted adventure');
+      await progressTracker.updateProgress(bookId, firstEntryId, firstEntryId, false);
     }
   };
 
   const handleCloseBook = async () => {
-    // If we're at an endpoint (no next steps), clear the progress
-    if (currentEntry && currentEntry.nextSteps.length === 0) {
-      await progressTracker.clearProgress(bookId);
+    if (currentEntry) {
+      // If we're at an endpoint (no more choices), clear the progress
+      if (currentEntry.choices.length === 0) {
+        await progressTracker.clearProgress(bookId);
+      } else {
+        // Otherwise, save the current progress
+        await progressTracker.updateProgress(bookId, currentEntry.id, currentEntry.id);
+      }
     }
     // Navigate back to the book list
     window.location.href = '/';
@@ -98,7 +183,7 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
     if (!book || !imageId || failedImages.has(imageId)) return undefined;
     const image = book.images.images[imageId];
     if (!image) return undefined;
-    
+
     return `/books/book-${bookId.toString().padStart(8, '0')}/images/${image.filename}`;
   };
 
@@ -133,9 +218,9 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
           <div className="bg-secondary p-6 rounded-lg shadow-lg mb-6">
             {currentEntry.imageId && (
               <div className="flex justify-center items-center my-6">
-                <img 
-                  src={getImageUrl(currentEntry.imageId)} 
-                  alt={book.images.images[currentEntry.imageId]?.altText || 'Scene illustration'} 
+                <img
+                  src={getImageUrl(currentEntry.imageId)}
+                  alt={book.images.images[currentEntry.imageId]?.altText || 'Scene illustration'}
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   onError={() => handleImageError(currentEntry.imageId!)}
                   loading="lazy"
@@ -150,13 +235,13 @@ export default function AdventureReader({ bookId, userId }: AdventureReaderProps
             ))}
 
             <div className="mt-8 space-y-4">
-              {currentEntry.nextSteps.map((step, index) => (
+              {availableChoices.map((choice, index) => (
                 <button
                   key={index}
-                  onClick={() => handleChoice(step.target, step.description)}
+                  onClick={() => handleChoice(choice.target, choice.text)}
                   className="w-full bg-accent text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-left"
                 >
-                  {step.description}
+                  {choice.text}
                 </button>
               ))}
             </div>

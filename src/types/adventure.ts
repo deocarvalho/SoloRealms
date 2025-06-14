@@ -5,9 +5,19 @@ export interface BaseEntry {
   NextSteps: NextStep[];
 }
 
+export type RequirementType = 'spell' | 'item' | 'once' | 'feature' | 'movementType' | 'class' | 'species';
+
+export interface Requirement {
+  type: RequirementType;
+  value?: string;
+  hides?: string[];  // Array of entry codes to hide when requirement is met
+  shows?: string[];  // Array of entry codes to show when requirement is met
+}
+
 export interface NextStep {
   Description: string;
   Code: string;
+  requirement?: Requirement;
 }
 
 export interface Entry extends BaseEntry {

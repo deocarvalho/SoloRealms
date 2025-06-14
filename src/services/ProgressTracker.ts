@@ -51,7 +51,7 @@ export class ProgressTracker {
     }
   }
 
-  async updateProgress(bookId: number, entryId: string, choice?: string, isEnd?: boolean): Promise<void> {
+  async updateProgress(bookId: number, entryId: string, targetId: string, isEnd?: boolean): Promise<void> {
     const progress = await this.getProgress(bookId) || {
       userId: this.userId,
       bookId,
@@ -69,10 +69,10 @@ export class ProgressTracker {
     }
 
     // Add choice if provided
-    if (choice) {
+    if (targetId) {
       progress.choices.push({
         entryId,
-        choice,
+        targetId,
         timestamp: new Date().toISOString()
       });
     }
