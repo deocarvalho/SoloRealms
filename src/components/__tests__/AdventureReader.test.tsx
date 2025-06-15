@@ -208,4 +208,247 @@ describe('AdventureReader', () => {
       });
     });
   });
+
+  describe('Navigation', () => {
+    it('should navigate between entries correctly', async () => {
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Wait for initial content
+      await waitFor(() => {
+        expect(screen.getByText('Welcome to the adventure!')).toBeInTheDocument();
+      });
+
+      // Click continue to move to next entry
+      fireEvent.click(screen.getByText('Continue'));
+
+      // Verify next entry content
+      await waitFor(() => {
+        expect(screen.getByText('You continue your journey.')).toBeInTheDocument();
+      });
+    });
+
+    it('should handle invalid navigation choices', async () => {
+      // Mock an invalid choice
+      const mockInvalidBook = {
+        entries: {
+          entries: {
+            ...mockBookContent.entries.entries,
+            NEXT: {
+              text: ['You continue your journey.'],
+              choices: [{ target: 'INVALID', text: 'Invalid Choice' }],
+              imageId: 'img2'
+            }
+          }
+        },
+        images: mockBookContent.images
+      };
+      (global.fetch as any).mockResolvedValueOnce({
+        ok: true,
+        json: () => Promise.resolve(mockInvalidBook)
+      });
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Wait for content to load
+      await waitFor(() => {
+        expect(screen.getByText('Welcome to the adventure!')).toBeInTheDocument();
+      });
+
+      // Click continue to move to next entry
+      fireEvent.click(screen.getByText('Continue'));
+
+      // Click invalid choice
+      fireEvent.click(screen.getByText('Invalid Choice'));
+
+      // Verify we stay on the current page
+      await waitFor(() => {
+        expect(screen.getByText('You continue your journey.')).toBeInTheDocument();
+        expect(screen.getByText('Invalid Choice')).toBeInTheDocument();
+      });
+    });
+  });
+
+  describe('Progress Tracking', () => {
+    it('should save progress when navigating', async () => {
+      const mockUpdateProgress = vi.fn();
+      (ProgressTracker as any).mockImplementation(() => ({
+        getProgress: vi.fn().mockResolvedValue(null),
+        updateProgress: mockUpdateProgress,
+        clearProgress: vi.fn()
+      }));
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Wait for initial content
+      await waitFor(() => {
+        expect(screen.getByText('Welcome to the adventure!')).toBeInTheDocument();
+      });
+
+      // Click continue
+      fireEvent.click(screen.getByText('Continue'));
+
+      // Verify progress was saved
+      await waitFor(() => {
+        expect(mockUpdateProgress).toHaveBeenCalledWith(
+          mockBookId,
+          'NEXT',
+          'Continue',
+          true
+        );
+      });
+    });
+
+    it('should load saved progress on mount', async () => {
+      const mockProgress = {
+        currentEntryId: 'NEXT',
+        choiceText: 'Continue',
+        isEnd: true
+      };
+      (ProgressTracker as any).mockImplementation(() => ({
+        getProgress: vi.fn().mockResolvedValue(mockProgress),
+        updateProgress: vi.fn(),
+        clearProgress: vi.fn()
+      }));
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Verify we start at the saved progress
+      await waitFor(() => {
+        expect(screen.getByText('You continue your journey.')).toBeInTheDocument();
+      });
+    });
+  });
+
+  describe('UI States', () => {
+    it('should show loading state for images', async () => {
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Wait for image to be rendered
+      await waitFor(() => {
+        const image = screen.getByAltText('Start image');
+        expect(image).toBeInTheDocument();
+        expect(image).toHaveAttribute('src', expect.stringContaining('image1.jpg'));
+      });
+
+      // Verify image is in loading state
+      const image = screen.getByAltText('Start image');
+      expect(image).toHaveAttribute('loading', 'lazy');
+    });
+
+    it('should handle different content types', async () => {
+      const mockBookWithDifferentContent = {
+        entries: {
+          entries: {
+            ...mockBookContent.entries.entries,
+            NEXT: {
+              text: ['Content with **bold** and *italic* text'],
+              choices: [],
+              imageId: null
+            }
+          }
+        },
+        images: mockBookContent.images
+      };
+      (global.fetch as any).mockResolvedValueOnce({
+        ok: true,
+        json: () => Promise.resolve(mockBookWithDifferentContent)
+      });
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Wait for initial content
+      await waitFor(() => {
+        expect(screen.getByText('Welcome to the adventure!')).toBeInTheDocument();
+      });
+
+      // Navigate to next entry
+      fireEvent.click(screen.getByText('Continue'));
+
+      // Verify markdown content is rendered correctly
+      await waitFor(() => {
+        const matches = screen.getAllByText(
+          (content: string, node: Element | null) => node?.textContent === 'Content with bold and italic text'
+        );
+        expect(matches.some(el => el.tagName === 'P')).toBe(true);
+      });
+    });
+  });
+
+  describe('Edge Cases', () => {
+    it('should handle empty book content', async () => {
+      const mockEmptyBook = {
+        entries: {
+          entries: {}
+        },
+        images: {
+          images: {}
+        }
+      };
+      (global.fetch as any).mockResolvedValueOnce({
+        ok: true,
+        json: () => Promise.resolve(mockEmptyBook)
+      });
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Verify error state
+      await waitFor(() => {
+        expect(screen.getByText('Failed to load the adventure book')).toBeInTheDocument();
+      });
+    });
+
+    it('should handle malformed book content', async () => {
+      const mockMalformedBook = {
+        entries: {
+          entries: {
+            START: {
+              text: ['Welcome to the adventure!'],
+              choices: [], // Empty array instead of null
+              imageId: 'img1'
+            }
+          }
+        },
+        images: mockBookContent.images
+      };
+      (global.fetch as any).mockResolvedValueOnce({
+        ok: true,
+        json: () => Promise.resolve(mockMalformedBook)
+      });
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Verify content is rendered
+      await waitFor(() => {
+        expect(screen.getByText('Welcome to the adventure!')).toBeInTheDocument();
+      });
+    });
+
+    it('should handle very long content', async () => {
+      const longContent = 'A'.repeat(10000); // Very long content
+      const mockBookWithLongContent = {
+        entries: {
+          entries: {
+            ...mockBookContent.entries.entries,
+            START: {
+              text: [longContent],
+              choices: mockBookContent.entries.entries.START.choices,
+              imageId: 'img1'
+            }
+          }
+        },
+        images: mockBookContent.images
+      };
+      (global.fetch as any).mockResolvedValueOnce({
+        ok: true,
+        json: () => Promise.resolve(mockBookWithLongContent)
+      });
+
+      render(<AdventureReader bookId={mockBookId} userId={mockUserId} />);
+
+      // Verify long content is rendered
+      await waitFor(() => {
+        expect(screen.getByText(longContent)).toBeInTheDocument();
+      });
+    });
+  });
 }); 
