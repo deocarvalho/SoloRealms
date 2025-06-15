@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { BookMetadata } from '@/types/book';
-import AdventureReader from '@/components/AdventureReader';
+import { AdventureReader } from '@/components/features/adventure/AdventureReader/AdventureReader';
 import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 import { ProgressTracker } from '@/services/ProgressTracker';
-import Modal from '@/components/Modal';
+import { Modal } from '@/components/common/Modal/Modal';
 
 interface BookListClientProps {
   books: BookMetadata[];
