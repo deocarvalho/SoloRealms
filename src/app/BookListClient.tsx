@@ -141,7 +141,7 @@ export default function BookListClient({ books }: BookListClientProps) {
                 <p className="text-gray-300 mb-4">By {book.authors?.join(', ')}</p>
                 <div className="mt-auto flex gap-2 w-full">
                   {hasOngoingSession ? (
-                    <div className="flex gap-2 w-full">
+                    <div className="flex gap-4 w-full">
                       <button
                         onClick={() => {
                           setSelectedBookId(book.id);

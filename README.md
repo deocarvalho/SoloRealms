@@ -1,6 +1,6 @@
-# Solo Realms
+# SoloRealms
 
-An interactive web application that brings solo D&D-style adventure books to life, making them as easy and immersive to play as a video game.
+A modern web application for interactive adventure books.
 
 ## 🎮 Features
 
@@ -66,12 +66,72 @@ yarn dev
 ## 📚 Project Structure
 
 ```
-SoloRealms/
-├── src/              # Source files
-├── public/           # Static assets
-├── JSON Books/       # Adventure book data
-└── images/          # Book and character images
+src/
+├── app/              # Next.js app directory
+├── components/       # React components
+│   ├── common/      # Reusable UI components
+│   ├── features/    # Feature-specific components
+│   ├── layout/      # Layout components
+│   └── ui/          # Basic UI components
+├── core/            # Core business logic
+├── lib/             # Library code and utilities
+├── services/        # Service layer (API clients, etc.)
+├── types/           # TypeScript type definitions
+└── utils/           # Utility functions
+
+public/              # Static assets
+books/              # Book content and resources
+scripts/            # Build and utility scripts
 ```
+
+## 📝 Development Guidelines
+
+### Code Organization
+
+1. **Components**
+   - Each component should be in its own directory
+   - Follow the feature-based organization pattern
+   - Include proper TypeScript types and documentation
+   - Keep components small and focused (Single Responsibility Principle)
+
+2. **State Management**
+   - Use React hooks for local state
+   - Keep state as close as possible to where it's used
+   - Use proper TypeScript types for state
+
+3. **TypeScript**
+   - Use strict type checking
+   - Define interfaces for all props and state
+   - Use proper type imports/exports
+
+4. **Styling**
+   - Use Tailwind CSS for styling
+   - Follow consistent naming conventions
+   - Keep styles modular and reusable
+
+### Best Practices
+
+1. **Clean Code**
+   - Write self-documenting code
+   - Use meaningful variable and function names
+   - Keep functions small and focused
+   - Follow SOLID principles
+
+2. **Testing**
+   - Write unit tests for components
+   - Test business logic thoroughly
+   - Use proper test organization
+
+3. **Performance**
+   - Optimize images and assets
+   - Use proper loading strategies
+   - Implement proper error boundaries
+
+4. **Accessibility**
+   - Use semantic HTML
+   - Include proper ARIA attributes
+   - Ensure keyboard navigation works
+   - Test with screen readers
 
 ## 🤝 Contributing
 

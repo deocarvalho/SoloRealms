@@ -24,7 +24,10 @@ export class ProgressTracker {
       bookId: data.book_id,
       currentEntryId: data.current_entry_id,
       visitedEntries: data.visited_entries,
-      choices: data.choices,
+      choices: data.choices.map((choice: any) => ({
+        entryId: choice.entry_id,
+        choice: choice.choice
+      })),
       completedAt: data.completed_at
     };
   }
